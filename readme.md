@@ -1,0 +1,117 @@
+# SadakSahayak-Python Backend
+
+FastAPI backend for the Sadak Sahayak app. It handles chat/RAG, vision analysis, case creation, branch chat sessions, location tracking, and FCM device registration.
+
+## Requirements
+
+- Python 3.11+
+- Azure SQL Database
+- Qdrant
+- OpenAI API key
+- Azure Key Vault access, if you use secrets from Key Vault
+- Docker Desktop, if you want to build and run the container locally
+
+## Environment Variables
+
+Required for local or container runtime:
+
+- `QDRANT_URL`
+- `QDRANT_API_KEY`
+- `OPENAI_API_KEY`
+- `AZURE_SQL_CONNECTION_STRING` or `DATABASE_URL`
+
+Required if using Key Vault fallback:
+
+- `AZURE_KEY_VAULT_URL`
+
+Optional:
+
+- `QDRANT_COLLECTION` = `sadaksahayak-documents`
+- `OPENAI_EMBEDDING_MODEL` = `text-embedding-3-large`
+- `OPENAI_CHAT_MODEL` = `gpt-4.1-mini`
+- `OPENAI_VISION_MODEL` = `gpt-4o-mini`
+- `OPENAI_TRANSCRIBE_MODEL` = `whisper-1`
+- `CHAT_IMAGES_CONTAINER` = `chat-images`
+- `CASE_IMAGES_CONTAINER` = `case-images`
+
+## Local Setup
+
+1. Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Set your environment variables in `.env` or the shell.
+
+4. Run the API:
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8080
+```
+
+5. Check health:
+
+```bash
+curl http://localhost:8080/health
+```
+
+## Containerization
+
+Build the image:
+
+```bash
+docker build -f Dockerfile -t ca6e8c56008bacr.azurecr.io/backend:v13 .
+```
+
+If your repo still uses the legacy filename, this also works:
+
+```bash
+docker build -f DockerFile -t ca6e8c56008bacr.azurecr.io/backend:v13 .
+```
+
+Run locally:
+
+```bash
+docker run --env-file .env -p 8080:8080 ca6e8c56008bacr.azurecr.io/backend:v13
+```
+
+## Push to Azure Container Registry
+
+```bash
+docker push ca6e8c56008bacr.azurecr.io/backend:v13
+```
+
+## Azure Deployment Notes
+
+- Make sure the container app or web app points to the new image tag: `backend:v13`
+- Confirm the app service has all required environment variables or Key Vault bindings
+- Verify Azure SQL connectivity and managed identity permissions if you use Key Vault
+
+## Main Endpoints
+
+- `GET /health`
+- `POST /chat`
+- `GET /chat-session`
+- `GET /branch-sessions`
+- `POST /branch-chat`
+- `POST /transcribe`
+- `POST /vision`
+- `GET /cases`
+- `POST /create-case`
+- `POST /update-case`
+- `POST /location`
+- `POST /devices/register`
+
+## Notes
+
+- The backend stores chat history, case history, and uploaded images in Azure SQL / Blob Storage.
+- The app relies on OpenAI for chat, vision, and transcription.
+- FCM registration is handled server-side through `POST /devices/register`.

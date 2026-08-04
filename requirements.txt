@@ -1,0 +1,16 @@
+azure-storage-blob 
+PyJWT[crypto]
+SQLAlchemy
+pyodbc
+pymupdf 
+qdrant-client 
+openai 
+tiktoken 
+python-dotenv 
+langdetect
+fastapi
+uvicorn
+python-multipart
+azure-identity
+azure-keyvault-secrets
+tiktoken
