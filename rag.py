@@ -2,6 +2,7 @@ import os
 import base64
 import json
 import logging
+import re
 from typing import Any
 
 try:
@@ -116,6 +117,13 @@ You provide accurate, clear, and legally correct information related to:
 Legal sources you may use:
 - Motor Vehicles Act, 1988 (including 2019 amendments)
 - Central Motor Vehicle Rules (CMVR)
+- Bharatiya Nyaya Sanhita (BNS) & BNSS (for criminal traffic offences)
+- Automotive Industry Standards (AIS) & Bureau of Indian Standards (BIS)
+- Ministry of Road Transport and Highways (MoRTH) Notifications & Circulars
+- Official Gazette Documents
+- State-specific policies (e.g., State EV policies, Taxation Acts, Bus Transport Rules)
+
+CRITICAL RULE: You must base all criminal offence answers exclusively on the Bharatiya Nyaya Sanhita (BNS) and BNSS. Under no circumstances should you cite the IPC (Indian Penal Code) or CrPC. If a user specifically asks about an old IPC section, acknowledge it, but DO NOT use the exact acronym 'IPC' or 'CrPC' in your response. Refer to it strictly as 'the former penal code' or 'the old section', and provide the current governing law under the new BNS framework.
 
 Never invent laws, sections, penalties, or enforcement actions.
 
@@ -148,14 +156,12 @@ Clear and concise
 
 DOMAIN RESTRICTION (ABSOLUTE)
 You are ONLY allowed to respond to queries related to:
-- Traffic rules
-- Traffic violations
-- Traffic penalties
-- Traffic enforcement procedures
-- Motor Vehicles Act, 1988
-- CMVR
-- Road safety compliance
-
+- Traffic rules, violations, penalties, and enforcement procedures
+- Motor Vehicles Act, 1988 and CMVR
+- Automotive engineering and safety standards (AIS & BIS)
+- Road safety compliance and infrastructure guidelines (MoRTH Circulars)
+- State-specific transport regulations and EV policies
+- Traffic-related criminal offences (BNS/BNSS)
 If the user asks ANY non-traffic-related question, respond ONLY with:
 {{
   "answer": "I can assist only with traffic rules, violations, and penalties. Please ask a traffic-related question.",
@@ -207,16 +213,48 @@ def get_response_kwargs(
     return kwargs
 
 
+def preprocess_search_query(query: str) -> str:
+    """Translates Hindi/Hinglish and legacy IPC/CrPC queries into pure English natural language for better RAG retrieval."""
+    openai_client = get_openai_client()
+    prompt = (
+        "You are an expert Indian law query translator. Your job is to prepare the user's query for an English-only semantic search database. "
+        "1. If the query is in Hindi or Hinglish, translate it to pure English. "
+        "2. If the query mentions an old IPC or CrPC section, replace it with the natural language offence (e.g., 'IPC 279' = 'rash driving'). "
+        "Return ONLY the optimized English search string. Do not return the acronyms IPC or CrPC. "
+        "If the query is already in English and doesn't mention old laws, return it unchanged."
+    )
+    
+    try:
+        response = openai_client.responses.create(
+            model=CHAT_MODEL,
+            max_output_tokens=50,
+            input=[
+                {"role": "developer", "content": prompt},
+                {"role": "user", "content": query}
+            ]
+        )
+        rewritten = response.output_text.strip()
+        print(f"Query Translator: '{query}' -> '{rewritten}'")
+        logger.info(f"Query Translator: '{query}' -> '{rewritten}'")
+        return rewritten
+    except Exception as e:
+        logger.error(f"Query Translator failed: {e}")
+        return query
+
+
 def retrieve_context(query: str, limit: int = 10):
     q_client = get_qdrant_client()
     openai_client = get_openai_client()
+    
+    # Pre-process the query (Translate Hinglish to English, IPC to BNS concepts)
+    search_query = preprocess_search_query(query)
 
-    if count_tokens(query) > MAX_INPUT_TOKENS:
-        query = truncate_text(query, MAX_INPUT_TOKENS)
+    if count_tokens(search_query) > MAX_INPUT_TOKENS:
+        search_query = truncate_text(search_query, MAX_INPUT_TOKENS)
 
     emb = openai_client.embeddings.create(
         model=EMBEDDING_MODEL,
-        input=[query],
+        input=[search_query],
     ).data[0].embedding
 
     results = q_client.query_points(
@@ -256,6 +294,20 @@ def generate_response(
         **get_response_kwargs(query, context, language, model, conversation_history, expect_json)
     )
     output_text = response.output_text.strip()
+    
+    # SAFETY NET: Prevent IPC/CrPC Hallucinations
+    if re.search(r'\b(IPC|CrPC)\b', output_text, re.IGNORECASE):
+        fallback_msg = "Error: The system attempted to cite outdated IPC/CrPC laws. Please verify against current BNS/BNSS guidelines."
+        logger.warning("Regex output filter caught IPC hallucination. Overriding response.")
+        if expect_json:
+            return {
+                "answer": fallback_msg,
+                "needs_followup": False,
+                "quick_replies": [],
+                "intent": "safety_override"
+            }
+        return fallback_msg
+
     if expect_json:
         parsed = _safe_json_loads(output_text)
         if parsed is not None:
@@ -293,8 +345,12 @@ def generate_structured_response(
     model: str | None = None,
     conversation_history: str | None = None,
 ) -> dict[str, Any]:
+    
+    # Pre-process the query so the LLM doesn't see legacy acronyms and gets a clean English query
+    safe_query = preprocess_search_query(query)
+    
     result = generate_response(
-        query=query,
+        query=safe_query,
         context=context,
         language=language,
         model=model,
