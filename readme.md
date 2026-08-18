@@ -54,13 +54,13 @@ pip install -r requirements.txt
 4. Run the API:
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8080
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 5. Check health:
 
 ```bash
-curl http://localhost:8080/health
+curl http://localhost:8000/health
 ```
 
 ## Containerization
@@ -68,30 +68,36 @@ curl http://localhost:8080/health
 Build the image:
 
 ```bash
-docker build -f Dockerfile -t ca6e8c56008bacr.azurecr.io/backend:v13 .
+docker build -f Dockerfile -t ca6e8c56008bacr.azurecr.io/backend:v16 .
 ```
 
 If your repo still uses the legacy filename, this also works:
 
 ```bash
-docker build -f DockerFile -t ca6e8c56008bacr.azurecr.io/backend:v13 .
+docker build -f DockerFile -t ca6e8c56008bacr.azurecr.io/backend:v14 .
 ```
 
 Run locally:
 
 ```bash
-docker run --env-file .env -p 8080:8080 ca6e8c56008bacr.azurecr.io/backend:v13
+docker run --env-file .env -p 8080:8080 ca6e8c56008bacr.azurecr.io/backend:v14
 ```
 
 ## Push to Azure Container Registry
 
+Make sure you are logged into the Azure Container Registry first:
 ```bash
-docker push ca6e8c56008bacr.azurecr.io/backend:v13
+az acr login --name ca6e8c56008bacr
+```
+
+Then push the image:
+```bash
+docker push ca6e8c56008bacr.azurecr.io/backend:v14
 ```
 
 ## Azure Deployment Notes
 
-- Make sure the container app or web app points to the new image tag: `backend:v13`
+- Make sure the container app or web app points to the new image tag: `backend:v14`
 - Confirm the app service has all required environment variables or Key Vault bindings
 - Verify Azure SQL connectivity and managed identity permissions if you use Key Vault
 

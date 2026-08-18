@@ -1,0 +1,32 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.git/
+.gitignore
+data/
+testcases/
+docs/
+seatbelt_output.txt
+data.zip
+*.zip
+
+# Local Test Files
+test_mobile_stream.py
+test_qdrant_source.py
+final_query_with_sources.json
+scratch/
+
+# Synced from .gitignore
+.venv/
+.env.*
+*.py[cod]
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# Azure CLI
+AzureCLI.msi
+.azure/

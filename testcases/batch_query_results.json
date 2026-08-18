@@ -1,0 +1,123 @@
+[
+  {
+    "Test_Case_ID": "TC-011",
+    "Original_Query": "मैंने कार CG04AB6721 को रोका। वाहन का पंजीकरण वैध है, लेकिन बीमा डेटाबेस से पता चलता है कि अनिवार्य बीमा पॉलिसी 4 महीने पहले समाप्त हो चुकी है। चालक का कहना है कि वह इसे कल नवीनीकृत करवाएगा। कौन सा कानूनी प्रावधान लागू होता है, और क्या आज चालान जारी किया जा सकता है? छत्तीसगढ़ के नवीनतम अनुसूची और कराधान नियम के अनुसार।",
+    "AI_Output": {
+      "answer": "If a vehicle has valid registration but its mandatory third-party insurance policy expired four months ago, the key violation is driving without valid insurance under Sections 146 and 196 of the Motor Vehicles Act, 1988. Valid insurance is a separate prerequisite from registration, so the expiry of insurance alone forms an offence. The driver’s claim to renew insurance tomorrow does not exempt them from penalty today if currently uninsured. The Chhattisgarh schedule and taxation rules under Sections 146 and 196 apply for penalizing use without valid third-party insurance. Yes, a challan can be issued today for this offence.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Morth Circularand Circular/08-08-2018.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-012",
+    "Original_Query": "एक मोटरसाइकिल (CG07MN4528) को 50 किमी/घंटा की गति सीमा वाले क्षेत्र में 78 किमी/घंटा की गति से चलते हुए दर्ज किया गया। साथ ही, चालक बार-बार वाहनों के बीच से निकल रहा था और अन्य सड़क उपयोगकर्ताओं को अचानक ब्रेक लगाने के लिए मजबूर कर रहा था। क्या इसे केवल अत्यधिक गति माना जाना चाहिए या किसी अन्य कानूनी प्रावधान पर भी विचार किया जाना चाहिए? छत्तीसगढ़ अनुसूची और कराधान के नवीनतम नियमों के अनुसार।",
+    "AI_Output": {
+      "answer": "The incident involves two violations for the motorcycle: 1. Speeding by traveling at 78 km/h in a 50 km/h zone. 2. Dangerous driving due to repeated weaving and forcing others to brake suddenly. Both speeding and dangerous driving should be considered separately under the Motor Vehicles Act.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-013",
+    "Original_Query": "मैंने यात्री बस CG01PA8822 को रोका। वाहन परिवहन वाहन के रूप में पंजीकृत है, लेकिन ऑपरेटर उस रूट के लिए वैध परमिट प्रस्तुत नहीं कर पा रहा है जिस पर यह वर्तमान में चल रही है। फिटनेस सर्टिफिकेट वैध है। मुझे चालान के लिए कौन सा कानूनी प्रावधान देखना चाहिए, और क्या वैध फिटनेस सर्टिफिकेट संचालन को कानूनी बनाता है? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
+    "AI_Output": {
+      "answer": "Violation: Operating a passenger bus without a valid route permit despite having a valid fitness certificate.\nRelevant Law / Section: As per The Chhattisgarh Motor Vehicles Rules, 1994, the vehicle must have a valid permit for the specified scheduled service route to legally ply. A fitness certificate certifies mechanical fitness but does not replace the need for a valid route permit. Section 56(4) of the Motor Vehicles Act, 1988, as cited, allows suspension or cancellation of the fitness certificate if the vehicle does not meet requirements, implying operational legality requires both fitness and valid permit.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: The vehicle can be ordered off-road or have its permit suspended until valid permits are obtained. The Regional Transport Officer can cancel or suspend the certificate of fitness linked to permit status.\nShort Explanation: The fitness certificate confirms the vehicle's mechanical fitness but does not authorize operation on routes without a valid permit. Therefore, a valid permit specific to the route is mandatory to operate legally. Operating without it breaches transport regulations and is subject to penalties and enforcement including cancellation of the fitness certificate.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/cmvtaxation_act_1991_text.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "data/Gazzette/18062020_draft GSR 392(E) dated 18th June 2020 generalized transport regime for movement of passenger and Goods vehicles.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-015",
+    "Original_Query": "मैंने रात 11:40 बजे एसयूवी CG05XY9182 को रोका। चालक की वाणी लड़खड़ा रही थी और उससे शराब की गंध आ रही थी। क्या केवल इन लक्षणों के आधार पर ही शराब पीकर गाड़ी चलाने का प्रावधान तुरंत लागू किया जा सकता है, या मुझे पहले ब्रेथ एनालाइजर/परीक्षण कराना चाहिए? मुझे नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार क्या रिकॉर्ड करना चाहिए?",
+    "AI_Output": {
+      "answer": "No, the offense of drunk driving cannot be immediately applied solely based on signs like slurred speech or smell of alcohol. According to Section 185 of the Motor Vehicles Act, 1988, a formal test such as a breath analyzer or other laboratory test must detect alcohol levels exceeding 30 mg per 100 ml of blood to establish the offense legally.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/MVA 1988 till 2025 may.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-016",
+    "Original_Query": "मैंने कार CG04CD7821 को रोका क्योंकि मैंने देखा कि चालक अपने दाहिने हाथ में मोबाइल फोन पकड़े हुए गाड़ी चलाते समय बात कर रहा था। चालक का कहना है कि वह केवल एक जरूरी कॉल का जवाब दे रहा था। कौन सा यातायात उल्लंघन लागू होता है और चालान जारी करने से पहले मुझे किस कानूनी प्रावधान की जांच करनी चाहिए? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
+    "AI_Output": {
+      "answer": "Violation: Using a mobile phone while driving with the phone held in hand.\nRelevant Law / Section: As per the Motor Vehicles Act and Central Motor Vehicles Rules applicable in Chhattisgarh, handheld mobile phone usage while driving is prohibited. The specific provision to check is Section 184 of the Motor Vehicles Act, 1988, which deals with dangerous driving, including using a handheld mobile device.\nPenalty: Penalty requires verification from the current applicable notification/schedule. Generally, the fine under central rules can be Rs. 1,000 for first offense and higher for repeated offences, but Chhattisgarh may have specific compounding amounts.\nEnforcement Action: Issue challan based on the above provision, verify identity and vehicle details and record evidence of phone use while driving.\nShort Explanation: Holding and using a mobile phone handset while driving is a dangerous driving offence that distracts the driver, increasing accident risk. Legal provisions under MVA Section 184 apply, with penalties as per the latest state-specific notification.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "data/ChhattisgarhStateEVPolicy2022English.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-017",
+    "Original_Query": "एक मोटरसाइकिल (CG07EF3198) ने व्यस्त चौराहे पर लाल सिग्नल पार किया। ट्रैफिक कैमरे ने सिग्नल लाल होने के बाद भी मोटरसाइकिल को स्टॉप लाइन पार करते हुए कैद किया। कोई दुर्घटना नहीं हुई। नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार, किस कानूनी उल्लंघन को माना जाना चाहिए और चालान के साथ क्या सबूत संलग्न किए जाने चाहिए?",
+    "AI_Output": {
+      "answer": "Violation: Crossing a red signal (jumping traffic light) by motorcycle.\nRelevant Law / Section: Under the Motor Vehicles Act, 1988 and applicable Chhattisgarh Motor Vehicle Rules.\nPenalty: The penalty amount for this offence requires verification from the current applicable notification/schedule.\nEnforcement Action: Possible fine and challan as per state traffic regulations; no vehicle seizure as no accident occurred.\nShort Explanation: The motorcycle violated traffic rules by passing the stop line at a red signal, which is a traffic offence subject to penalty under the Motor Vehicles Act and related Chhattisgarh rules.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "CG Motor Vehicle Taxation Act and Rule 1991 (2024 Print)_organized_ocr.pdf",
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/cmvtaxation_act_1991_text.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-019",
+    "Original_Query": "मालवाहक ट्रक CG10JK6724 का अनुमत सकल वाहन भार 25,000 किलोग्राम है, लेकिन वेइंगब्रिज पर इसका वजन 29,500 किलोग्राम दर्ज हुआ है। चालक का कहना है कि अतिरिक्त माल परिवहन कंपनी द्वारा लादा गया था और उसे इस वजन की जानकारी नहीं थी। कौन सा कानूनी प्रावधान लागू हो सकता है, और चालान/कार्रवाई तय करने से पहले अधिकारी को क्या सत्यापित करना चाहिए? यह जानकारी छत्तीसगढ़ अनुसूची और कराधान नियम के नवीनतम नियमों के अनुसार है।",
+    "AI_Output": {
+      "answer": "Violation: Overloading a goods vehicle beyond its permitted Gross Vehicle Weight (GVW).\nRelevant Law / Section: The specific rules under The Chhattisgarh Motor Vehicles Rules, 1994 regarding goods carriage overloading and Section related to gross vehicle weight limits.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Authorities can demand the driver to place the vehicle on a weighbridge or wheel-weigher approved by the Transport Commissioner to verify the actual weight. If overloaded, challan can be issued to the driver and/or transport company as per the law. Both the driver and the transport company can be held responsible for carrying excess load beyond permitted limits.\nShort Explanation: Overloading a goods vehicle beyond the permitted GVW of 25,000 kg, such as with 29,500 kg, constitutes a violation. Authorities use weighbridges to verify the excess weight. Responsibility lies both on the driver for driving the overloaded vehicle and on the transport company for authorizing the extra load. Penalties depend on the specific rules applicable, which require verification.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "overloading_violation_in_gv_weight"
+    },
+    "Sources_Used": [
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "data/Gazzette/380_07082023.pdf",
+      "data/Gazzette/197_04052023.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-020",
+    "Original_Query": "मैंने मोटरसाइकिल CG08LM5216 को रोका। चालक के पास वैध लर्नर लाइसेंस है, लेकिन वह आवश्यक लर्नर पहचान/चिह्न के बिना और लागू लर्नर शर्तों का पालन किए बिना अकेले मोटरसाइकिल चला रहा है। उसका कहना है कि चूंकि उसका लर्नर लाइसेंस वैध है, इसलिए कोई चालान जारी नहीं किया जा सकता। अधिकारी को क्या जांच करनी चाहिए? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
+    "AI_Output": {
+      "answer": "Violation: Riding a motorcycle with a learner's license without displaying the required 'L' mark and not following learner conditions. Relevant Law / Section: As per CMVR, the vehicle must have the letter 'L' painted at front and rear as specified for learner drivers. Penalty: Penalty requires verification from the current applicable notification/schedule. Enforcement Action: Vehicle may be stopped and the rider warned or fined as per law. Short Explanation: A learner driver must display the learner 'L' mark on the vehicle clearly and comply with all learner conditions; failing to do so is a violation despite having a valid learner's license.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/CMVR_1989.pdf",
+      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1) (1).pdf",
+      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1).pdf"
+    ]
+  }
+]

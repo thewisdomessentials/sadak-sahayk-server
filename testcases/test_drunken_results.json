@@ -1,0 +1,10 @@
+{
+  "answer": "Violation: Drunken driving for four-wheelers in Chhattisgarh\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 185\nPenalty: For the first offence, imprisonment up to 6 months and/or fine up to Rs. 10,000. For the second or subsequent offence, imprisonment up to 2 years and/or fine up to Rs. 15,000.\nEnforcement Action: Possible imprisonment and/or fines. Disqualification of driving license may also apply.\nShort Explanation: Driving a motor vehicle while under the influence of alcohol above the prescribed limit is illegal. The penalty is more severe for repeated offences.\n\nRegarding the condition about the axis of the vehicle: The relevant text does not specify conditions related to the axis of the vehicle. Please clarify if you meant axle load or any other particular vehicle condition.",
+  "needs_followup": true,
+  "quick_replies": [
+    "Axle Load Limits",
+    "Vehicle Axis Conditions",
+    "No Additional Info"
+  ],
+  "intent": "penalty_lookup"
+}

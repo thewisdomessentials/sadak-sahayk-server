@@ -1,0 +1,337 @@
+[
+  {
+    "Test_Case_ID": "TC-051",
+    "Original_Query": "मैंने एक कार को रोका। चालक के पास ड्राइविंग लाइसेंस का कोई भौतिक (physical) दस्तावेज नहीं है, लेकिन आधिकारिक डेटाबेस में जांच करने पर उसका DL वैध (valid) दिखा रहा है। क्या मुझे भौतिक दस्तावेज न होने पर चालान काटना चाहिए?",
+    "AI_Output": {
+      "answer": "If the driver's license is valid in the official database and can be verified electronically (e.g., via DigiLocker or mParivahan app), there is no need to issue a challan for not having the physical driving license document.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Morth Circularand Circular/08-08-2018.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf",
+      "data/Morth Circularand Circular/17th Dec 2018.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-052",
+    "Original_Query": "मैंने एक ट्रक को रोका। चालक के पास वैध ड्राइविंग लाइसेंस है, लेकिन वह केवल दोपहिया वाहन (LMV/MCWG) चलाने के लिए अधिकृत है, भारी मोटर वाहन (HMV) के लिए नहीं। इस स्थिति में मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "Violation: Driving a heavy motor vehicle without a valid driving licence endorsement for that category.\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 3 (Driving without a valid licence for the vehicle class) read with relevant penalty provisions.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: The driver is not authorized to drive a heavy motor vehicle as per the licence endorsement. The licence holder should be issued a notice or challan under the provision for driving a vehicle without appropriate endorsement and the vehicle may be detained if required by law enforcement procedure.\nShort Explanation: Driving a heavy motor vehicle without the valid licence endorsement for heavy vehicles is a violation of the Motor Vehicles Act. Even though the driver has a licence for two-wheelers, it does not authorize driving heavier vehicle categories such as trucks.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
+      "data/Morth Circularand Circular/16 April 2018.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-053",
+    "Original_Query": "एक चालक का ड्राइविंग लाइसेंस 2 महीने पहले समाप्त (expired) हो गया है, जबकि दूसरे चालक का लाइसेंस अदालत द्वारा निलंबित (suspended) कर दिया गया है। इन दोनों मामलों में क्या कानूनी अंतर है और दोनों के लिए मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "Violation: Driving without a valid licence. Relevant Law / Section: Expired licence is governed by Sections 14 and 15 of the Motor Vehicles Act, 1988 (validity and renewal), while court suspension/disqualification is governed by Sections 19, 20, 21, 22, and 23 (disqualification, suspension, and their effects). Penalty: For expired licence, penalty applies under Section 181 read with Section 3, but exact amount requires verification from the current applicable notification/schedule. For court suspension, penalty and enforcement depend on the specific disqualification order under Sections 19-23. Enforcement Action: Expired licence requires renewal before driving legally; authorities verify licence status and apply usual penalty provisions for driving with an expired licence. For court suspension, authorities must record the disqualification order and apply suspension/cancellation penalties and enforcement as per the order, which may include prohibition from driving and other sanctions. Short Explanation: An expired licence is a validity issue typically resolved by renewal, whereas a court suspension is a legal disqualification that prohibits driving until lifted and often carries stricter penalties and enforcement implications.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "general_info"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-054",
+    "Original_Query": "एक वाहन का पंजीकरण प्रमाणपत्र (RC) समाप्त हो गया है, दूसरे का आरसी रद्द (cancelled) हो गया है, और तीसरे वाहन का कभी पंजीकरण ही नहीं हुआ है। इन तीनों स्थितियों में क्या कानूनी अंतर है और मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "{\n  \"answer\": \"Violation: 1. Use of vehicle with expired registration certificate. 2. Use of vehicle with cancelled registration certificate. 3. Use of vehicle never registered.\\n\\nRelevant Law / Section:\\n- Expired registration certificate: Section 39 and Section 192 of the Motor Vehicles Act, 1988.\\n- Cancelled registration certificate: Section 55 of the Motor Vehicles Act, 1988.\\n- Never registered vehicle: Section 39 and Section 192 of the Motor Vehicles Act, 1988.\\n\\nPenalty:\\n- For expired registration (Section 39/192): Penalty requires verification from the current applicable notification/schedule.\\n- For cancelled registration (Section 55): Using a cancelled vehicle registration is treated under Section 39/192; penalty as above.\\n- For never registered vehicle (Section 39/192): Penalty requires verification from the current applicable notification/schedule.\\n\\nEnforcement Action:\\n- Vehicles with expired or cancelled registration or never registered may be detained under Section 207 (for use without valid registration or permit).\\n- Owner must apply for fresh registration as per CMVR Rule 47; without valid registration, vehicle use on road is illegal.\\n\\nShort Explanation:\\n- A vehicle with an expired or cancelled registration certificate or a vehicle never registered is considered unregistered for use on public roads, which is a violation under Sections 39 and 192.\\n- Such",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "general_info"
+    },
+    "Sources_Used": [
+      "data/MVA 1988 till 2025 may.pdf",
+      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1).pdf",
+      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1) (1).pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-055",
+    "Original_Query": "एक नई कार का अस्थायी पंजीकरण (temporary registration) अभी भी वैध है, जबकि दूसरी कार का अस्थायी पंजीकरण 1 महीने पहले समाप्त हो चुका है और उसने स्थायी पंजीकरण के लिए आवेदन नहीं किया है। दोनों मामलों में मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "For the car with a valid temporary registration, ensure the registration mark is displayed correctly and keep the document safely as it authorizes legal use on road. For the car whose temporary registration expired one month ago without permanent registration application, the vehicle is considered unregistered legally. You should not use this vehicle on public roads. The owner must immediately apply for permanent registration. Enforcement authorities can impose penalties or other measures for use without valid registration under relevant provisions such as Section 39 or Section 192 of the Motor Vehicles Act.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "registration_compliance"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Gazzette/29052020_draft GSR 336(E) dated 29th May 2020 Licensing of drivers, Fitness and Registration of motor vehicles_0.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-056",
+    "Original_Query": "एक वाहन के निरीक्षण के दौरान, आरसी (RC) में दर्ज चेसिस नंबर वाहन पर उकेरे गए नंबर से मेल नहीं खाता है। चालक का दावा है कि यह एक लिपिकीय त्रुटि (clerical error) है। मुझे इस मामले की जांच कैसे करनी चाहिए और क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "For a chassis number discrepancy, verify the official registration record and physical chassis engraving carefully. Check if the incorrect number in the registration certificate is due to a clerical or data entry error by reviewing authorized correction procedures. If the discrepancy persists, do not assume forgery without further investigation. Follow prescribed administrative correction workflows to rectify clerical errors. If evidence indicates unauthorized tampering or mismatch, initiate further legal and enforcement procedures as per Section 39 of the Motor Vehicles Act. Verification from competent authorities is also recommended before enforcement or detention actions.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "vehicle_identification_verification"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf",
+      "data/AIS (400 pdf)/531201714455PMAIS-065_and_Amd_1_to_3.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-057",
+    "Original_Query": "एक कमर्शियल वाहन का परमिट समाप्त हो गया है, दूसरे वाहन के पास परमिट है लेकिन वह गलत रूट पर चल रहा है (परमिट शर्तों का उल्लंघन), और तीसरे वाहन के पास कोई परमिट ही नहीं है। इन तीनों उल्लंघनों में क्या अंतर है?",
+    "AI_Output": {
+      "answer": "The distinctions among these permit-related violations for commercial vehicles are as follows:\n\n1. Operating with an expired permit means the vehicle has a permit that is no longer valid because its validity period has ended. This is effectively operating without a valid permit.\n\n2. Operating with a valid permit on an unauthorized route is a violation of the permit conditions where the vehicle's use does not comply with the specified route, area, or purpose permitted under the permit.\n\n3. Operating without any permit means the vehicle does not have any permit granted or countersigned by the authorized Regional or State Transport Authority.\n\nLegally, Section 66 of the Motor Vehicles Act requires transport vehicles to be used only in accordance with permit conditions. Section 192A addresses use without the required permit and use in contravention of permit conditions such as route or area.\n\nEach violation involves different levels of non-compliance: expired or no permit is non-possession of a valid permit, whereas unauthorized route is breaching the terms of a valid permit. Enforcement and penalties vary accordingly.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "permit_violation_explanation"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1).pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-058",
+    "Original_Query": "एक कार 50 किमी/घंटा की सीमा वाले क्षेत्र में 75 किमी/घंटा की गति से चल रही थी, लेकिन सीधी रेखा में थी। दूसरी कार भी 75 किमी/घंटा पर थी, लेकिन वह खतरनाक तरीके से लेन बदल रही थी (weaving)। क्या दोनों को सिर्फ ओवरस्पीडिंग माना जाएगा या दूसरी कार पर खतरनाक ड्राइविंग का भी आरोप लगेगा?",
+    "AI_Output": {
+      "answer": "No, both will not be charged only with overspeeding. The first car driving at 75 km/h in a 50 km/h zone is liable for overspeeding under Section 183 of the Motor Vehicles Act. The second car driving at 75 km/h but weaving dangerously may be charged not only for overspeeding under Section 183 but also for dangerous driving under Section 184, as their manner of driving is dangerous and reckless.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/MVA 1988 till 2025 may.pdf",
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-059",
+    "Original_Query": "एक वाहन चालक अचानक सड़क पर आए जानवर को बचाने के लिए गलत दिशा (wrong-side) में चला गया। दूसरा चालक ट्रैफिक जाम से बचने के लिए जानबूझकर गलत दिशा में खतरनाक तरीके से ड्राइविंग कर रहा था। इन दोनों स्थितियों में मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "In the first situation, the driver moved to the wrong side to avoid an animal, which could be considered an emergency or unavoidable act. Exercise caution and avoid collisions, but generally, no punitive action if done to avoid accident and no danger caused. In the second situation, the driver deliberately driving dangerously on the wrong side to avoid traffic jam is a violation of safe driving rules and traffic laws. You should report this to the nearest police or traffic authorities with details such as vehicle number and location, because it endangers public safety and violates Section 3 of Motor Vehicles Act regarding dangerous driving. Avoid confronting the driver directly to ensure your safety.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
+      "data/Gazzette/23062017_Motor-Vehicle-Driving-Regulation-2017-H-E.pdf",
+      "data/Appendices_English .pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-060",
+    "Original_Query": "एक चालक पर शराब पीने का शक था। पहले मामले में ब्रेथ एनालाइजर टेस्ट नेगेटिव आया, दूसरे में पॉजिटिव आया (30mg/100ml से अधिक), और तीसरे मामले में चालक ने टेस्ट देने से साफ इनकार कर दिया। तीनों मामलों में मेरी क्या कार्रवाई होनी चाहिए?",
+    "AI_Output": {
+      "answer": "Violation: Driving under influence of alcohol or drugs\nRelevant Law / Section: Section 185 and Section 203, Motor Vehicles Act, 1988\nPenalty: For first offence with alcohol concentration exceeding 30 mg per 100 ml of blood, imprisonment up to six months and/or fine of Rs 10,000; repeat offences have higher penalties.\nEnforcement Action: \n1. For negative breath test - No offence established; no arrest or penalty. Continue observation or investigation if needed.\n2. For positive breath test above 30 mg/100 ml - Arrest without warrant (except in hospital), seize vehicle if necessary, initiate prosecution.\n3. For refusal to provide breath specimen when reasonably suspected of alcohol use - Arrest without warrant (except in hospital), opportunity to provide specimen at police station, prosecution for refusal.\nShort Explanation: If the breath analyzer test is negative, no offence under Section 185 is established. A positive breath test with alcohol exceeding 30 mg/100 ml blood is punishable by imprisonment or fine. Refusal to provide a breath specimen on reasonable suspicion is itself an offence allowing arrest and prosecution under Section 203(4). Enforcement officers should follow these procedures accordingly for a two-wheeler driver.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "drunken_driving_procedure"
+    },
+    "Sources_Used": [
+      "data/MVA 1988 till 2025 may.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-061",
+    "Original_Query": "एक चालक को शराब पीकर गाड़ी चलाने (drunken driving) के लिए रोका गया। सिस्टम से पता चलता है कि उसे 1 साल पहले 'खतरनाक ड्राइविंग' (dangerous driving) के लिए दोषी ठहराया गया था। क्या यह पिछला अपराध वर्तमान शराब के अपराध के लिए 'दोहरा अपराध' (repeat offence) माना जाएगा?",
+    "AI_Output": {
+      "answer": "No, the previous conviction for dangerous driving will not automatically be considered a repeat offense for the current drunken driving offense. Each offense must be verified separately for repeat offender status based on the exact prior offense, conviction date, and statutory conditions.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "repeat_offense_check"
+    },
+    "Sources_Used": [
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-062",
+    "Original_Query": "एक चालक को शराब पीकर गाड़ी चलाते हुए पकड़ा गया। रिकॉर्ड से पता चलता है कि 4 साल पहले भी उसे इसी अपराध के लिए दोषी ठहराया गया था। क्या इसे 'द्वितीय या पश्चात्वर्ती अपराध' (second or subsequent offence) माना जाएगा और जुर्माना बढ़ाया जाएगा?",
+    "AI_Output": {
+      "answer": "Violation: Driving by a drunken person\nRelevant Law / Section: Section 185, Motor Vehicles Act, 1988\nPenalty: For a second or subsequent offence, imprisonment may extend to two years and fine up to fifteen thousand rupees.\nEnforcement Action: Driving license may be impounded as per provisions for second/subsequent offences.\nShort Explanation: Since the driver was previously convicted for the same offence about four years ago, this is considered a second or subsequent offence, attracting increased penalties under Section 185 of the Motor Vehicles Act, 1988.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/MVA 1988 till 2025 may.pdf",
+      "data/Morth Circularand Circular/1-Sep-2019.pdf",
+      "data/Gazzette/09082019_MV Act English09-08-2019.pdf",
+      "data/Motor Vehicles (Amendment) Act, 2019.pdf",
+      "data/Gazzette/09082019_Motor Vehicles (Amendment) Act 09-08-2019.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-063",
+    "Original_Query": "एक ट्रक को ओवरलोडिंग के संदेह में रोका गया। पहले मामले में वेइंगब्रिज (weighbridge) पर 5 टन अतिरिक्त वजन की पुष्टि हुई। दूसरे मामले में कोई वेइंगब्रिज नहीं था, केवल देखकर लगा कि ट्रक ओवरलोडेड है। क्या मैं केवल देखकर ओवरलोडिंग का चालान कर सकता हूँ?",
+    "AI_Output": {
+      "answer": "No, you cannot issue a challan based solely on visual observation for overloading a truck. Reliable weighment at a certified weighbridge or by an authorized weighing device is mandatory to establish the overloading violation legally under Section 113 and Section 114 of the Motor Vehicles Act, 1988. Visual suspicion alone is not sufficient evidence for enforcement action.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/CMVR_1989.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-064",
+    "Original_Query": "एक कमर्शियल यात्री वैन में अनुमति से 3 यात्री अधिक बैठे हैं, लेकिन वाहन का कुल वजन अनुमत सकल वाहन भार (GVW) के भीतर ही है। क्या मुझे अतिरिक्त यात्रियों के लिए चालान काटना चाहिए या वजन GVW के भीतर होने के कारण उन्हें छोड़ देना चाहिए?",
+    "AI_Output": {
+      "answer": "Yes, it is necessary to issue a challan for carrying three extra passengers in a commercial traveler van even if the total vehicle weight is within the permitted gross vehicle weight limit. The primary violation is carrying excess passengers beyond the authorized capacity as per the registration certificate or permit. This is governed by Section 194A of the Motor Vehicles Act, 1988. The penalty for this violation is a fine of Rs. 200 per excess passenger. Enforcement should verify the authorized capacity from the RC or permit, count actual passengers, and preserve evidence before issuing the challan.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "overloading_penalty_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/AIS (400 pdf)/1122018124347PMAIS-053_7amds_and_Corri_1.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-065",
+    "Original_Query": "एक कार का बीमा (insurance) समाप्त हो चुका है। दूसरी कार का बीमा डेटाबेस में वैध (valid) दिखा रहा है, लेकिन चालक के पास कोई भौतिक पॉलिसी या डिजिटल कॉपी नहीं है। दोनों मामलों में क्या कोई उल्लंघन हुआ है?",
+    "AI_Output": {
+      "answer": "Yes, driving a car with expired insurance is a violation. However, if the insurance is valid in the database but the driver does not have a physical or digital copy of the insurance certificate, it is not a violation because authorities accept electronic verification via apps like mParivahan or DigiLocker, and physical/digital copy is not mandatory if validation can be done online.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "insurance_violation_check"
+    },
+    "Sources_Used": [
+      "data/Morth Circularand Circular/08-08-2018.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Morth Circularand Circular/17th Dec 2018.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-066",
+    "Original_Query": "एक मोटरसाइकिल का पंजीकरण और बीमा पूरी तरह से वैध है, लेकिन उसका प्रदूषण नियंत्रण प्रमाणपत्र (PUC) 2 दिन पहले समाप्त हो चुका है। इस स्थिति में मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "Violation: Using a vehicle without a valid Pollution Under Control (PUC) certificate.\nRelevant Law / Section: CMVR Rule 115 and Rule 116; Motor Vehicles Act, 1988 Section 190(2).\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: The vehicle's registration certificate may be suspended by the registering authority until a valid PUC certificate is produced. The permit granted for the vehicle is deemed suspended until compliance.\nShort Explanation: Driving a vehicle with an expired PUC certificate is a violation of pollution control norms. The vehicle must be tested and a valid PUC certificate obtained promptly to avoid suspension of registration and permit.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "pucc_expiry_action"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/CMVR-chapter5_English.pdf",
+      "data/CMVR_1989.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-067",
+    "Original_Query": "एक एम्बुलेंस सायरन और बत्ती के साथ लाल बत्ती पार कर गई (आपातकाल)। दूसरी ओर, एक निजी कार केवल हैज़र्ड लाइट्स (hazard lights) चालू करके तेजी से लाल बत्ती पार कर गई। दोनों स्थितियों में मुझे क्या कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "For the ambulance with siren and lights on: It is allowed to cross the red traffic light with utmost care, responsibility, and caution as per the Motor Vehicles Driving Regulation, 2017. For the private car crossing red light with only hazard lights on: This is a violation as hazard lights do not grant any exemption to traffic signals. You should report the private car violation to the traffic police for appropriate action.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Gazzette/23062017_Motor-Vehicle-Driving-Regulation-2017-H-E.pdf",
+      "data/AIS (400 pdf)/352018104443AMAIS_125.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-068",
+    "Original_Query": "एक वाहन को एक ही समय और स्थान पर एक ही उल्लंघन के लिए दो चालान जारी किए गए हैं (डुप्लीकेट)। दूसरे मामले में, वाहन ने सुबह रेड लाइट पार की और दोपहर में ओवरस्पीडिंग की। मुझे दोनों मामलों को कैसे संभालना चाहिए?",
+    "AI_Output": {
+      "answer": "For duplicate challans issued for the same violation at the same time and place, verify the transaction/payment status. If the first challan is settled, do not create or enforce a duplicate. Use the authorized e-challan correction or cancellation workflow to rectify any errors. For separate violations occurring at different times (red light crossing in the morning and overspeeding in the afternoon), treat them as distinct offences and enforce separately with appropriate challans.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "duplicate_and_multiple_violations_handling"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-069",
+    "Original_Query": "एक स्पीड कैमरे ने कार को ओवरस्पीडिंग करते पकड़ा, लेकिन तस्वीर में चालक का चेहरा साफ नहीं है। कार का मालिक कहता है कि वह गाड़ी नहीं चला रहा था और उसे नहीं पता कि कौन चला रहा था। इस स्थिति में चालान के लिए कौन जिम्मेदार होगा?",
+    "AI_Output": {
+      "answer": "In this case, under Section 133 of the Motor Vehicles Act, the car owner must provide information about the driver if known or reasonably ascertainable. If the owner cannot identify the actual driver, the owner is not automatically guilty of the speeding offence solely because of this section. Liability depends on further statutory presumption, electronic enforcement procedures, or state-specific rules. Hence, the owner must comply with the information duty, but liability for the fine is determined based on subsequent evidence or procedure.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "speed_camera_offence_liability"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-070",
+    "Original_Query": "एक सड़क दुर्घटना में केवल दो कारों को नुकसान (property damage) पहुँचा। दूसरी दुर्घटना में एक व्यक्ति घायल (injury) हो गया। तीसरी दुर्घटना में एक व्यक्ति की मृत्यु (death) हो गई। यातायात अधिकारी के रूप में मेरी कानूनी जिम्मेदारियां और कार्रवाई इन तीनों मामलों में कैसे भिन्न होगी?",
+    "AI_Output": {
+      "answer": "In case of property damage only (two cars), as a traffic officer you must document the collision details, parties involved, vehicles, damages, insurance, registration, and licence particulars. You must ensure the driver fulfills duties under Section 134 MVA including providing accident info to police and insurer. For injury cases, additionally prioritize immediate medical aid, record medical documentation and accident evidence, and investigate applicable Motor Vehicles Act or BNS offences. For death cases, preserve the accident scene and evidence, initiate a criminal investigation as per BNSS sections 194 and 196, including immediate intimation to the Executive Magistrate and preparation of cause-of-death report. Do not mix death/injury criminal procedures automatically into property-only accidents. These steps cover driver duties and officer investigation responsibilities distinctly.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "officer_duties_accident"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-071",
+    "Original_Query": "लापरवाही से ड्राइविंग के कारण एक व्यक्ति की मृत्यु हो गई। पहले मामले में चालक ने तुरंत पुलिस को सूचित किया और वहीं रुका रहा। दूसरे मामले में चालक मौके से भाग गया (हिट एंड रन) और पुलिस को कोई सूचना नहीं दी। दोनों मामलों में क्या अलग-अलग कानूनी कार्रवाई होगी?",
+    "AI_Output": {
+      "answer": "Violation 1: Causing death by rash or negligent driving with immediate reporting and staying at the spot.\nRelevant Law / Section: BNS 106(1)\nPenalty: Imprisonment up to five years and fine.\nEnforcement Action: Prosecution under BNS 106(1) with police investigation and trial.\nShort Explanation: When a driver causes death by rash or negligent driving but reports immediately and stays, the punishment can be imprisonment up to five years and fine.\n\nViolation 2: Causing death by rash or negligent driving and fleeing the scene without reporting (hit and run).\nRelevant Law / Section: BNS 106(2)\nPenalty: Imprisonment up to ten years and fine.\nEnforcement Action: Stricter prosecution under BNS 106(2) due to escape without reporting, including investigation and trial.\nShort Explanation: If the driver flees the scene without reporting, it aggravates the offence with imprisonment up to ten years and fine.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "death_by_negligent_driving"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/BNS_250883_english_01042024.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-072",
+    "Original_Query": "एक चालक ने जानबूझकर तेज गति से वाहन चलाकर किसी व्यक्ति को गंभीर रूप से घायल कर दिया। इसमें मोटर वाहन अधिनियम (MVA) का उल्लंघन तो है ही, साथ ही आपराधिक कानून (BNS/BNSS) के तहत भी अपराध बनता है। मुझे MVA और BNS/BNSS दोनों के तहत कब और कैसे कार्रवाई करनी चाहिए?",
+    "AI_Output": {
+      "answer": "Action should be taken immediately upon establishing that the driver deliberately caused grievous hurt by rash or negligent driving on a public way. The relevant criminal offence is under BNS section 125(b) for grievous hurt caused by rash/negligent act endangering life or personal safety. The motor vehicle law relevant here is Section 184 of the Motor Vehicles Act, 1988, which addresses dangerous driving with punishments including imprisonment and/or fine. Enforcement action includes arrest, investigation, and prosecution under both the Motor Vehicles Act and Bharatiya Nyaya Sanhita (BNS). Prompt medical evidence to establish grievous hurt and proof of rash/negligent driving is necessary to apply these provisions correctly.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf"
+    ]
+  }
+]

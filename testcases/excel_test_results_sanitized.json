@@ -1,0 +1,106 @@
+[
+  {
+    "Original Test Case": "Verify unauthorized person driving a motor vehicle should attract ₹5000 and/or imprisonment up to 3 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify unauthorized person driving a motor vehicle should attract how much fine and/or imprisonment up to what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Allowing unauthorized persons to drive a motor vehicle.\nRelevant Law / Section: Section 180 of the Chhattisgarh Motor Vehicles Rules, 1994.\nPenalty: Imprisonment which may extend to three months, or a fine of five thousand rupees, or both.\nEnforcement Action: The vehicle owner or person in charge can be prosecuted and punished with imprisonment, fine, or both if found allowing an unauthorized person to drive.\nShort Explanation: If the owner or person in charge permits someone who does not satisfy license provisions to drive the vehicle, they can face imprisonment or a fine as per Chhattisgarh Motor Vehicles Rules.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify racing challan should be ₹5000 and/or 3 months imprisonment for the first offense and ₹10000 and/or 1-year imprisonment for a subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify racing challan should be how much fine and/or what duration imprisonment for the first offense and how much fine and/or what duration imprisonment for a subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Unauthorized racing or trial of speed without written consent of the State Government.\nRelevant Law / Section: Section 189 of the Motor Vehicles Act, 1988.\nPenalty: For the first offence – imprisonment for a term which may extend to six months, or fine which may extend to five hundred rupees, or both.\nEnforcement Action: Imprisonment or fine or both as per the court's discretion.\nShort Explanation: Participating in or permitting racing or speed trials in a public place without permission is punishable with imprisonment and/or fine to deter dangerous driving activities and ensure road safety.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle in poor condition should attract ₹1500 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a vehicle in poor condition should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Please specify the type of vehicle involved: Two-wheeler, Four-wheeler / Car, or Commercial / Heavy vehicle.",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle without registration should attract ₹10000 and/or imprisonment for 6 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a vehicle without registration should attract how much fine and/or imprisonment for what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a vehicle without registration.\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 192.\nPenalty: For the first offence, a fine which may extend to five thousand rupees but not less than two thousand rupees. For the second or subsequent offence, imprisonment which may extend to one year and a fine equal to ten times the amount of annual road tax or two-thirds of the lifetime tax of the motor vehicle, whichever is higher.\nEnforcement Action: Imprisonment up to one year and fine as mentioned; stricter penalties for repeat offenders.\nShort Explanation: Driving a vehicle without registration is a punishable offence with varying fines and possible imprisonment under Chhattisgarh traffic rules as per the Motor Vehicles Act.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle without insurance should attract ₹2000-₹5000 for the first offense and ₹5000-₹10000 for a subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a vehicle without insurance should attract how much fine for the first offense and how much fine for a subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving without insurance\nRelevant Law / Section: Section 196 of Chhattisgarh Motor Vehicles Rules, 1994\nPenalty: Rs 1000 for the first offence, Rs 2000 for subsequent offences\nEnforcement Action: None specified beyond fine\nShort Explanation: Driving a vehicle without valid insurance is penalized with a fine of Rs 1000 for the first offence and Rs 2000 for repeat offences to ensure financial security and compliance with legal requirements.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving over-loaded goods vehicles should attract ₹20000 and ₹2000 per extra tonne as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving over-loaded goods vehicles should attract how much fine and how much fine per extra tonne as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a motor vehicle exceeding the permissible weight limits.\nRelevant Law / Section: Motor Vehicles Act, Sections 113, 114, 115.\nPenalty: A fine of ₹20,000 plus an additional fine of ₹2,000 per tonne of excess load.\nEnforcement Action: The vehicle is not allowed to move unless the excess load is removed or removed under supervision.\nShort Explanation: Driving goods vehicles with weight exceeding the legal limit attracts a heavy fine and the vehicle is detained until the load is reduced to the permissible limit.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify refusing to stop for weighing the vehicle should attract ₹40000 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify refusing to stop for weighing the vehicle should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Refusing to stop and submit vehicle to weighing after being directed by an authorized officer\nRelevant Law / Section: Motor Vehicles Act, Section 194(2)\nPenalty: Fine of 40,000 rupees\nEnforcement Action: Vehicle may be stopped and weighed; refusal attracts penalty\nShort Explanation: Drivers must stop their vehicle for weighing when directed by authorized officers. Refusal leads to a substantial fine to ensure compliance and prevent overloading violations.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify safety standards violation by motor-cycle drivers or pillion riders should attract ₹1000 and/or cancellation of license for 3 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify safety standards violation by motor-cycle drivers or pillion riders should attract how much fine and/or cancellation of license for what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Safety standards violation by motorcycle drivers or pillion riders\nRelevant Law / Section: Section 128 and Section 194C of the Chhattisgarh Motor Vehicles Rules, 1994\nPenalty: Fine of one thousand rupees\nEnforcement Action: Disqualification of the licence for a period of three months\nShort Explanation: Drivers who violate safety measures for motorcycle drivers and pillion riders as prescribed under Section 128 are liable to pay a fine of Rs. 1000 and face a licence disqualification for three months under Section 194C.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify unnecessary honking should attract ₹1000-₹2000 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify unnecessary honking should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Unnecessary or continuous sounding of horn.\nRelevant Law / Section: Section 194F of the Chhattisgarh Motor Vehicles Act (2019 Amendment).\nPenalty: For the first offence, a fine of Rs. 1000. For the second or subsequent offence, a fine of Rs. 2000.\nEnforcement Action: Imposition of fine by traffic authorities.\nShort Explanation: Sounding the horn needlessly or continuously, or more than necessary to ensure safety, is prohibited and punishable with fines to control noise pollution and maintain road discipline.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify not giving way to an ambulance or emergency vehicle should attract ₹10000 and/or imprisonment up to 6 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify not giving way to an ambulance or emergency vehicle should attract how much fine and/or imprisonment up to what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Failure to allow free passage to emergency vehicles (ambulance or fire service vehicle) in Chhattisgarh\nRelevant Law / Section: Section 194E of the Chhattisgarh Motor Vehicles Act\nPenalty: Imprisonment for a term which may extend to six months, or a fine of ten thousand rupees, or both\nEnforcement Action: Possible imprisonment and/or fine\nShort Explanation: If a driver fails to draw to the side of the road to allow an ambulance or other emergency vehicle specified by the State Government to pass, they are liable for imprisonment up to 6 months and/or a fine of Rs. 10,000 under the latest provisions of Chhattisgarh Motor Vehicles Act.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  }
+]
