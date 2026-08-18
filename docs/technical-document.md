@@ -112,7 +112,7 @@ Core constants:
 | Vision model | `OPENAI_VISION_MODEL` | `gpt-4o-mini` |
 | Max input tokens | Code constant | `500` |
 | Max context tokens | Code constant | `1500` |
-| Max output tokens | Code constant | `300` |
+| Max output tokens | Code constant | `600` |
 
 Main functions:
 
