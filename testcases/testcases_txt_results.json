@@ -1,0 +1,320 @@
+[
+  {
+    "Original Test Case": "48. Verify challan fine for overspeeding should be ₹1500 as per the applicable Chhattisgarh road challan schedule",
+    "Sanitized Query (Sent to AI)": "48. Verify challan fine for overspeeding should be how much fine as per the applicable Chhattisgarh road challan schedule",
+    "AI Output": {
+      "answer": "Violation: Overspeeding\nRelevant Law / Section: Section 183 Motor Vehicles Act, 1988\nPenalty: Rs 400 for general vehicles; Rs 1000 for Light Motor Vehicles (LMV); Rs 2000 for Medium passenger vehicles\nEnforcement Action: Fine as specified, possible vehicle impoundment if repeated or severe\nShort Explanation: Overspeeding penalties vary based on vehicle type in Chhattisgarh, with heavier vehicles attracting higher fines to ensure road safety compliance.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "51. Verify challan fine for drunk driving should be ₹10000 as per the applicable Chhattisgarh road challan schedule",
+    "Sanitized Query (Sent to AI)": "51. Verify challan fine for drunk driving should be how much fine as per the applicable Chhattisgarh road challan schedule",
+    "AI Output": {
+      "answer": "Please specify the type of vehicle involved for accurate fine amount on drunk driving as fines differ across vehicle types.",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify challan fine for offenses relating to maintenance, construction, sale, and alteration of motor vehicles should be ₹5000 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify challan fine for offenses relating to maintenance, construction, sale, and alteration of motor vehicles should be how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Offenses related to maintenance, construction, sale, and alteration of motor vehicles\nRelevant Law / Section: Chhattisgarh Motor Vehicles Rules, 1994 and related amendments as per Chhattisgarh Motor Vehicle Taxation Act, 1991\nPenalty: The fine amount varies based on vehicle type: Scooters and Motorcycles Rs. 30 per vehicle; Light Motor Vehicles (Car, Jeep, Auto rickshaw, etc.) Rs. 60 per vehicle; Heavy Motor Vehicles (Empty Truck, Bus) Rs. 100 per vehicle; Heavy Motor Vehicles (Loaded Truck, Bus) Rs. 130 per vehicle; Medium Motor Vehicles Rs. 80 per vehicle.\nEnforcement Action: Fine collection at the time of violation detection; may include additional penalties if continuous non-compliance.\nShort Explanation: The fine for offenses involving maintenance, construction, sale, and alteration of motor vehicles in Chhattisgarh depends on the vehicle category, with the specified fines ranging from Rs. 30 to Rs. 130 per vehicle as per the latest schedules under the state's Motor Vehicles Rules and Taxation Act.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify disobedience of orders or refusal of information to authority should attract ₹2000 and/or imprisonment up to 1 month as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify disobedience of orders or refusal of information to authority should attract how much fine and/or imprisonment up to what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Disobedience of orders, obstruction and refusal of information to authority.\nRelevant Law / Section: Bharatiya Nagarik Suraksha Sanhita (BNS), Section 179 and related provisions.\nPenalty: A fine which may extend to five hundred rupees for general disobedience. If the disobedience causes danger to human life, health or safety, or tends to cause riot or affray, imprisonment may extend up to one year and/or fine up to five thousand rupees.\nEnforcement Action: Fine or imprisonment, or both, based on severity and circumstances.\nShort Explanation: Wilful disobedience of lawful orders or refusal to provide information to authorized public servants is punishable. Greater penalties apply when such disobedience endangers public safety or causes public disturbance.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify unauthorized person driving a motor vehicle should attract ₹5000 and/or imprisonment up to 3 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify unauthorized person driving a motor vehicle should attract how much fine and/or imprisonment up to what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Allowing unauthorized person to drive a motor vehicle.\nRelevant Law / Section: Section 180, Motor Vehicles Act, 1988.\nPenalty: Imprisonment for a term which may extend to three months or fine which may extend to five thousand rupees, or both.\nEnforcement Action: Police may detain and penalize the vehicle owner or person in charge who permits unauthorized driving.\nShort Explanation: If the owner or person in charge allows someone to drive the vehicle who does not meet the legal driving requirements, they can be punished with up to three months imprisonment or a fine up to ₹5000 or both as per Chhattisgarh motor vehicle regulations aligned with the Motor Vehicles Act, 1988.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify dangerous or rash driving challan should be how much fine for the first offense and ₹how much fine for subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify dangerous or rash driving challan should be how much fine for the first offense and how much fine for subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Dangerous or rash driving\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 184\nPenalty: For the first offence, a fine of 2,000 rupees; for subsequent offences, a fine of 5,000 rupees\nEnforcement Action: Possible suspension or disqualification of driving licence based on court orders\nShort Explanation: Driving dangerously or rashly endangers public safety and is penalized with substantial fines to deter such behavior. The fine increases for repeat offences to emphasize the increased risk to public safety.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify drunken driving challan should be ₹10000 for the first offense and  for the 15000 subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify drunken driving challan should be how much fine for the first offense and for the how much fine subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Drunken Driving\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 185 (as amended)\nPenalty: For the first offence, imprisonment up to 6 months and/or fine up to Rs. 10,000. For the second or subsequent offence, imprisonment up to 2 years and/or fine up to Rs. 15,000.\nEnforcement Action: Possible imprisonment and fine as specified; disqualification of driving license may also apply depending on the circumstances.\nShort Explanation: Driving a motor vehicle under the influence of alcohol beyond the permissible blood alcohol level is a punishable offence with increased penalties for repeated violations to enhance road safety in Chhattisgarh.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify racing challan should be ₹5000 and/or 3 months imprisonment for the first offense and ₹10000 and/or 1-year imprisonment for a subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify racing challan should be how much fine and/or what duration imprisonment for the first offense and how much fine and/or what duration imprisonment for a subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Illegal racing or trial of speed without written consent of the State Government.\nRelevant Law / Section: Section 189 of the Motor Vehicles Act, 1988.\nPenalty: For the first offence, imprisonment may extend up to 6 months or with a fine up to ₹5,000, or both. For the second or subsequent offence within three years, imprisonment may extend up to 2 years or with a fine up to ₹10,000, or both.\nEnforcement Action: Imprisonment and/or fine as prescribed.\nShort Explanation: Participating in or permitting motor vehicle races or speed trials in public places without official consent is a punishable offence with specified imprisonment and fine, increasing for repeat offenders within three years.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle in poor condition should attract ₹1500 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a 4 wheeler vehicle in poor condition should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a four-wheeler vehicle in poor condition.\nRelevant Law / Section: Chhattisgarh Motor Vehicles Rules, 1994 and related amendments.\nPenalty: Rs. 1000 for the first offence, and Rs. 2000 for subsequent offences.\nEnforcement Action: Fine as prescribed; vehicle may be inspected or impounded if posing safety risks.\nShort Explanation: Driving a vehicle that violates road safety and noise and pollution control standards leads to monetary penalties to ensure safety on public roads.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle without registration should attract ₹10000 and/or imprisonment for 6 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a 4 wheeler vehicle without registration should attract how much fine and/or imprisonment for what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a motor vehicle without registration.\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 192 (as per Chhattisgarh amendments)\nPenalty: For first offence, fine between Rs. 2,000 and Rs. 5,000; for second or subsequent offence, imprisonment up to 3 years and fine up to Rs. 20,000.\nEnforcement Action: Fine imposed for first offence; imprisonment and fine for subsequent offences.\nShort Explanation: Driving a four-wheeler without registration in Chhattisgarh attracts a minimum fine of Rs. 2,000 for the first offence, with the possibility of imprisonment and higher fines on repeat offences as per the Motor Vehicles Act and Chhattisgarh amendments.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving a vehicle without insurance should attract ₹2000-₹5000 for the first offense and ₹5000-₹10000 for a subsequent offense as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving a 4 wheeler vehicle without insurance should attract how much fine for the first offense and how much fine for a subsequent offense as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a four-wheeler without insurance\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 196 and related amendments applicable in Chhattisgarh\nPenalty: For the first offense, the fine is Rs. 1500. For subsequent offenses, the fine remains Rs. 1500 as per the latest schedule applicable in Chhattisgarh.\nEnforcement Action: Fine collection, vehicle may be impounded until valid insurance is provided.\nShort Explanation: Driving a four-wheeler without valid insurance is a punishable traffic violation in Chhattisgarh, attracting a fixed penalty of Rs. 1500 per offense to ensure compliance and reduce financial risk in accidents.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving over-loaded goods vehicles should attract ₹20000 and ₹2000 per extra tonne as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving over-loaded goods vehicles should attract how much fine and how much fine per extra tonne as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "According to the latest Chhattisgarh traffic regulations, the fine for driving an overloaded goods vehicle is a minimum of Rs. 2,000 and an additional fine of Rs. 2,000 per tonne of excess load. There is also a liability to pay charges for off-loading the excess load. The vehicle is not allowed to move until the excess load is removed.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify refusing to stop for weighing the vehicle should attract ₹40000 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify refusing to stop for weighing the 4 wheeler vehicle should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Refusal to stop for vehicle weighing when directed by an authorized officer.\nRelevant Law / Section: Motor Vehicles Act, Section 114 (as per Chhattisgarh Motor Vehicles Rules)\nPenalty: Fine which may extend to three thousand rupees.\nEnforcement Action: The vehicle may be subjected to weighing; failure to comply leads to fine.\nShort Explanation: If a driver of a four-wheeler refuses to stop and submit the vehicle for weighing after being directed by an authorized officer, they are liable to pay a fine up to Rs. 3000 as per Chhattisgarh traffic regulations.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify over-loaded passenger vehicles should attract ₹200 per extra passenger as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify over-loaded passenger 4 wheeler vehicles should attract how much fine per extra passenger as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "The current fine for carrying extra passengers in an overloaded four-wheeler vehicle in Chhattisgarh is ₹200 per excess passenger. Additionally, the transport vehicle shall not be allowed to move before the excess passengers are off-loaded and alternative transport is arranged for them.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify safety standards violation by motor-cycle drivers or pillion riders should attract ₹1000 and/or cancellation of license for 3 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify safety standards violation by motorcycle drivers or pillion riders should attract how much fine and/or cancellation of license for what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Safety standards violation by motorcycle drivers or pillion riders\nRelevant Law / Section: Section 128 and Section 194C of the Chhattisgarh traffic regulations\nPenalty: Fine of one thousand rupees\nEnforcement Action: Disqualification for holding a licence for a period of three months\nShort Explanation: Driving or allowing a motorcycle to be driven in contravention of mandated safety measures for drivers and pillion riders is punishable by a fine and licence disqualification to ensure compliance with safety standards.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving without helmet should attract ₹1000 and/or cancellation of license for 3 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify driving without helmet should attract how much fine and/or cancellation of license for what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Driving a motor cycle without wearing a protective headgear (helmet).\nRelevant Law / Section: Section 194D of the Chhattisgarh Motor Vehicles Act, 1991 and related rules.\nPenalty: A fine of one thousand rupees (Rs. 1000).\nEnforcement Action: Disqualification from holding a driving licence for a period of three months.\nShort Explanation: Anyone driving or allowing a motor cycle to be driven without a helmet is liable for a fine and licence suspension to ensure rider safety as per the latest Chhattisgarh regulations.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify unnecessary honking should attract ₹1000-₹2000 as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify unnecessary honking should attract how much fine as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Unnecessary or continuous honking of motor vehicle horn\nRelevant Law / Section: Section 194F of the Chhattisgarh Motor Vehicles Rules\nPenalty: Fine of one thousand rupees (₹1000) for the first offence, and two thousand rupees (₹2000) for the second or subsequent offence.\nEnforcement Action: Monetary fine as specified; repeated offences attract higher fines.\nShort Explanation: Loud or unnecessary use of horn or use in silence zones is penalized to reduce noise pollution and disturbance.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify not giving way to an ambulance or emergency vehicle should attract ₹10000 and/or imprisonment up to 6 months as per the latest Chhattisgarh schedule",
+    "Sanitized Query (Sent to AI)": "Verify not giving way to an ambulance or emergency vehicle should attract how much fine and/or imprisonment up to what duration as per the latest Chhattisgarh schedule",
+    "AI Output": {
+      "answer": "Violation: Failure to allow free passage to emergency vehicles\nRelevant Law / Section: Section 194E of the Chhattisgarh Motor Vehicles Rules, 1994\nPenalty: Fine of up to ten thousand rupees\nEnforcement Action: Imprisonment for a term which may extend to six months, or with fine or both\nShort Explanation: If a driver fails to draw to the side of the road to allow an ambulance, fire service vehicle, or other specified emergency vehicle to pass, they can be fined up to ₹10,000 and/or face imprisonment up to six months as per the Chhattisgarh Motor Vehicles Rules.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving without a driving license or with an expired license should attract ₹5000 and/or imprisonment up to 3 months as per the latest applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify driving without a driving license or with an expired license should attract how much fine and/or imprisonment up to what duration as per the latest applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Driving without a valid driving licence or with an expired licence\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 181 and Section 182\nPenalty: Imprisonment for a term which may extend to three months, or fine which may extend to five thousand rupees, or with both.\nEnforcement Action: The individual may be arrested and prosecuted, and vehicle may be seized if applicable.\nShort Explanation: Driving without a valid or with an expired driving licence is a punishable offence under the Motor Vehicles Act, with provisions for imprisonment and fines, aimed to ensure that drivers comply with licensing requirements to maintain road safety.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify an unauthorized person driving a vehicle should attract ₹5000 and/or imprisonment up to 3 months as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify an unauthorized person driving a 4 wheeler vehicle should attract how much fine and/or imprisonment up to what duration as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Allowing unauthorized persons to drive a motor vehicle.\nRelevant Law / Section: Section 180 of the Motor Vehicles Act, 1988.\nPenalty: Imprisonment for a term which may extend to three months, or with fine of up to five thousand rupees, or with both.\nEnforcement Action: The vehicle owner or person in charge may be prosecuted, and if found guilty, the prescribed punishment will be enforced.\nShort Explanation: If a vehicle owner or person in charge permits someone who does not have a valid driving license or does not satisfy the legal requirements under Sections 3 or 4 of the Motor Vehicles Act to drive the vehicle, they are liable for imprisonment up to three months, a fine up to five thousand rupees, or both.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving without or with an expired registration certificate for two-wheelers should attract ₹3000 for the first offense and ₹5000 for the subsequent offense as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify driving without or with an expired registration certificate for two-wheelers should attract how much fine for the first offense and how much fine for the subsequent offense as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Driving a two-wheeler without registration or with an expired registration certificate.\nRelevant Law / Section: Section 192(1) of the Motor Vehicles Act, 1988.\nPenalty: For the first offence, a fine between ₹2,000 and ₹5,000. For the second or subsequent offence, imprisonment up to one year or a fine between ₹5,000 and ₹10,000, or both.\nEnforcement Action: The vehicle may be detained, and legal proceedings initiated. The court may impose lower punishment for reasons recorded.\nShort Explanation: Driving a two-wheeler without valid registration is an offence with escalating penalties for repeat offenders to ensure compliance with vehicle registration laws.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify road tax non-payment should attract ₹500 as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify road tax non-payment should attract how much fine as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Non-payment of road tax\nRelevant Law / Section: Section 13 of the Motor Vehicles Taxation Act\nPenalty: The owner is liable to pay the unpaid amount of tax plus a penalty at the rate of one-twelfth of the unpaid amount for each month or part thereof the payment is delayed. If lifetime tax is unpaid, the penalty is one percent of the lifetime tax.\nEnforcement Action: The Taxation Authority is empowered to fix the penalty amount in writing and initiate recovery proceedings including seizure and detention of the vehicle if tax remains unpaid beyond the prescribed period.\nShort Explanation: Failure to pay road tax results in a financial penalty proportional to the delay duration, and authorities can enforce recovery through legal action including vehicle seizure to ensure compliance.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving without or with an expired insurance policy should attract ₹2000 for the first offense and ₹4000 for the second or any subsequent offense and/or imprisonment up to 3 months as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify driving without or with an expired insurance policy should attract how much fine for the first offense and how much fine for the second or any subsequent offense and/or imprisonment up to what duration as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Driving a motor vehicle without valid insurance or with an expired insurance policy.\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 196.\nPenalty: For the first offense, a fine up to Rs. 2,000; for second or subsequent offenses within three years, imprisonment up to one year and a fine which may extend to Rs. 10,000 but shall not be less than Rs. 5,000.\nEnforcement Action: The vehicle may be detained or impounded until valid insurance is produced.\nShort Explanation: Driving without valid insurance is a punishable offense that attracts escalating fines and possible imprisonment on repeat violations to ensure compliance and financial responsibility on roads.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify failure to report a change of address within thirty days should attract ₹500 for the first offense and ₹1000 for the second or subsequent offense as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify failure to report a change of address within thirty days should attract how much fine for the first offense and how much fine for the second or subsequent offense as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "For failure to report a change of address within the specified period, the owner of the motor vehicle may be required to pay a prescribed amount not exceeding five hundred rupees as a penalty in lieu of action under section 177 of the Motor Vehicles Act, 1988. This payment avoids further action for the first offense. If the penalty is not paid, action under section 177 will be taken. The provision does not specifically mention increased fines for second or subsequent offenses related to change of address notification, only that failure to pay the prescribed amount will lead to enforcement action under section 177. Thus, the fine for the first offense is up to Rs. 500, and for subsequent offenses, actions under section 177 apply, which could include higher penalties or additional enforcement measures.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify violating air pollution standards should attract ₹2000 for the first offense and ₹5000 for the second or subsequent offense and disqualification for holding a license for 3 months as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify violating air pollution standards should attract how much fine for the first offense and how much fine for the second or subsequent offense and disqualification for holding a license for what duration as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation of air pollution standards while driving a motor vehicle in public places is punishable as follows: For the first offence, imprisonment up to three months, or fine up to ten thousand rupees, or both, along with disqualification from holding a driving licence for three months. For any second or subsequent offence, imprisonment up to six months, or fine up to ten thousand rupees, or both. These penalties are as per the Motor Vehicles Act and related environmental regulations.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify overloading should attract ₹20000 and ₹2000 per tonne of surplus weight plus off-loading charges as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify overloading should attract how much fine and how much fine per tonne of surplus weight plus off-loading charges as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "What type of vehicle are you asking about for the overloading fine? Please select your vehicle type.",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify failure to provide passage to emergency vehicles should attract ₹10000 and/or imprisonment up to 6 months as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify failure to provide passage to emergency vehicles should attract how much fine and/or imprisonment up to what duration as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Failure to allow free passage to emergency vehicles.\nRelevant Law / Section: Section 194E of the Motor Vehicles Act.\nPenalty: Imprisonment for up to six months, or a fine of ten thousand rupees, or both.\nEnforcement Action: The offender may be prosecuted and penalized with imprisonment and/or fine.\nShort Explanation: Any driver who fails to draw to the side of the road to allow the passage of a fire service vehicle, ambulance, or other specified emergency vehicle, obstructing its free passage, commits an offense punishable by imprisonment and/or fine.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify racing and trails of speed should attract ₹5000 and/or imprisonment up to 3 months for the first offense, and ₹10000 and/or imprisonment up to 1 year for a subsequent offense as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify racing and trails of speed should attract how much fine and/or imprisonment up to what duration for the first offense, and how much fine and/or imprisonment up to what duration for a subsequent offense as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Racing and trials of speed.\nRelevant Law / Section: Motor Vehicles Act, Section 189.\nPenalty: For the first offense, imprisonment may extend to six months, or a fine which may extend to five thousand rupees, or both. For subsequent offenses, imprisonment may extend to one year, or a fine which may extend to ten thousand rupees, or both.\nEnforcement Action: Imprisonment and/or fine as prescribed.\nShort Explanation: Engaging in or permitting motor vehicle racing or speed trials in public places without written consent of the State Government is punishable with imprisonment and/or fines, with increased penalties for repeat offenders.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "Original Test Case": "Verify wrong parking should attract ₹500 for the first violation and ₹1000 for the second or subsequent violation as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify wrong parking should attract how much fine for the first violation and how much fine for the second or subsequent violation as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Wrong parking in a public place causing impediment to free flow of traffic.\nRelevant Law / Section: Motor Vehicles Act, 1988 and its amendments.\nPenalty: For the first violation, the fine is up to five hundred rupees. For the second or subsequent violations, the fine can be higher as per the State Government notifications.\nEnforcement Action: The vehicle may be removed by an authorized agency and removal charges recovered from the owner. Penalties and removal charges are collected by authorized officers.\nShort Explanation: Parking a vehicle wrongly in a public place that obstructs traffic flow attracts a penalty of up to 500 rupees for the first offence. Repeat offences may incur higher penalties and include removal charges if the vehicle is towed by authorized authorities.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify driving without helmet should attract ₹1000 and license suspension for 3 months as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify driving without helmet should attract how much fine and license suspension for what duration as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Driving a motorcycle without wearing a protective headgear (helmet).\nRelevant Law / Section: Section 129 of the Motor Vehicles Act and related rules.\nPenalty: A fine of one thousand rupees.\nEnforcement Action: Disqualification from holding a driving licence for a period of three months.\nShort Explanation: Riding a motorcycle without a helmet violates safety regulations, attracting a fine and temporary licence suspension to ensure compliance and road safety.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "penalty_lookup"
+    }
+  },
+  {
+    "Original Test Case": "Verify offences by a juvenile should attract a fine of ₹25000 and imprisonment up to 3 years for the guardian or owner, with vehicle registration cancelled for 1 year and the juvenile not eligible for a license until 25 years as per the applicable rule interpretation",
+    "Sanitized Query (Sent to AI)": "Verify offences by a juvenile should attract a fine of how much fine and imprisonment up to what duration for the guardian or owner, with vehicle registration cancelled for what duration and the juvenile not eligible for a license until 25 years as per the applicable rule interpretation",
+    "AI Output": {
+      "answer": "Violation: Juvenile committing a motor vehicle offence with consent of guardian or owner\nRelevant Law / Section: Motor Vehicles Act, 1988 (Section related to juvenile offences and guardian/owner liability)\nPenalty: Guardian or owner shall be punishable with imprisonment for a term which may extend to three years and with a fine of twenty-five thousand rupees.\nEnforcement Action: Registration of the motor vehicle used in the commission of the offence shall be cancelled for a period of twelve months.\nShort Explanation: When a juvenile commits an offence using a motor vehicle with the consent of the guardian or owner, the guardian or owner can be held liable with imprisonment up to three years and a fine of ₹25,000. Additionally, the vehicle's registration will be cancelled for 12 months. The juvenile is not eligible for a driving licence or learner's licence until the age of twenty-five years.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "juvenile_offence_penalty"
+    }
+  }
+]

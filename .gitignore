@@ -1,16 +1,38 @@
+# Environment variables
 .env
 .env.*
 !.env.example
 
+# Python
 venv/
 .venv/
 __pycache__/
 *.py[cod]
-
-.DS_Store
-
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
+# OS files
+.DS_Store
+
+# Logs
 *.log
+
+# Data and Local Artifacts
+data/
+!data/data.md
+data.zip
+*.zip
+scratch/
+
+# Recent Test Scripts & Outputs
+test_batch_v6.py
+batch_query_v6_results.json
+test_single.py
+test_10_unique.py
+test_10_unique_results.json
+ingest_batch.py
+check_hindi_pdf.py
+test_fastapi.py
+testcases/test_enforcement_mapping.py
+testcases/enforcement_mapping_results.json

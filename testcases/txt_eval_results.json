@@ -1,0 +1,157 @@
+[
+  {
+    "test_case": "48. Verify challan fine for overspeeding should be ₹1500 as per the applicable Chhattisgarh road challan schedule",
+    "status": "FAIL",
+    "reason": "The Ground Truth does not explicitly mention overspeeding under any section or fine of ₹1000-₹2000 but states ₹1500 fine specifically for driving a vehicle in poor condition under Sec 190(1), and overspeeding is not verified there; thus the AI’s fines and section citation do not match the provided rules."
+  },
+  {
+    "test_case": "51. Verify challan fine for drunk driving should be ₹10000 as per the applicable Chhattisgarh road challan schedule",
+    "status": "FAIL",
+    "reason": "The AI incorrectly states a fine up to two thousand rupees, whereas the Ground Truth specifies a ₹10,000 fine for the first offence under Section 185 for drunken driving in Chhattisgarh."
+  },
+  {
+    "test_case": "Verify challan fine for offenses relating to maintenance, construction, sale, and alteration of motor vehicles should be ₹5000 as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output mentions fines around ₹1500 for maintenance and alteration-related violations, while the Ground Truth mandates a ₹5000 fine as per the latest Chhattisgarh schedule, indicating a significant discrepancy."
+  },
+  {
+    "test_case": "Verify disobedience of orders or refusal of information to authority should attract ₹2000 and/or imprisonment up to 1 month as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output correctly states a fine up to ₹2,000 and/or imprisonment up to 1 month for disobedience/refusal as per Section 179, consistent with the latest Chhattisgarh schedule cited in the prompt."
+  },
+  {
+    "test_case": "Verify unauthorized person driving a motor vehicle should attract ₹5000 and/or imprisonment up to 3 months as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output correctly states the ₹5,000 fine and imprisonment up to three months as per Section 180, matching the verified Ground Truth rule."
+  },
+  {
+    "test_case": "Verify dangerous or rash driving challan should be how much fine for the first offense and ₹how much fine for subsequent offense as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output understates the fine amounts for dangerous or rash driving as per the Ground Truth, which specifies ₹1,000 to ₹5,000 for the first offence and ₹10,000 for subsequent offences, whereas the AI states ₹2,000 and ₹5,000 respectively."
+  },
+  {
+    "test_case": "Verify drunken driving challan should be ₹10000 for the first offense and  for the 15000 subsequent offense as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output fine amounts (₹2,000 first offence and ₹10,000 subsequent) do not match the Ground Truth for Chhattisgarh which specifies ₹10,000 for the first offence and ₹15,000 for subsequent offences."
+  },
+  {
+    "test_case": "Verify racing challan should be ₹5000 and/or 3 months imprisonment for the first offense and ₹10000 and/or 1-year imprisonment for a subsequent offense as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output states higher fines (₹10,000/₹20,000) and longer imprisonment (up to 1 year/3 years) than the Ground Truth which specifies ₹5,000 and/or 3 months for the first offence and ₹10,000 and/or 1 year for subsequent offences."
+  },
+  {
+    "test_case": "Verify driving a vehicle in poor condition should attract ₹1500 as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI Output correctly states the ₹1,500 fine for driving a vehicle in poor condition as per the Chhattisgarh schedule, matching the Ground Truth."
+  },
+  {
+    "test_case": "Verify driving a vehicle without registration should attract ₹10000 and/or imprisonment for 6 months as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output accurately reflects the general Section 192 penalties as per the Ground Truth and does not contradict the partial verification or additional details of Section 192A given."
+  },
+  {
+    "test_case": "Verify driving a vehicle without insurance should attract ₹2000-₹5000 for the first offense and ₹5000-₹10000 for a subsequent offense as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output incorrectly states ₹1,500 fines for both first and subsequent offenses, whereas the Ground Truth specifies ₹2,000 for the first offense and ₹4,000 for subsequent offenses, with the test case's ₹2,000-₹5,000 and ₹5,000-₹10,000 ranges marked as partially verified and inaccurate."
+  },
+  {
+    "test_case": "Verify driving over-loaded goods vehicles should attract ₹20000 and ₹2000 per extra tonne as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output incorrectly states a fine of Rs. 300 per quarter per extra tonne, contradicting the verified Ground Truth penalty of ₹20,000 plus ₹2,000 per extra tonne."
+  },
+  {
+    "test_case": "Verify refusing to stop for weighing the vehicle should attract ₹40000 as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI correctly states the ₹40,000 fine for refusing to stop for weighing as per the verified Ground Truth."
+  },
+  {
+    "test_case": "Verify over-loaded passenger vehicles should attract ₹200 per extra passenger as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output correctly states the fine as ₹200 per excess passenger and includes appropriate enforcement action consistent with the Ground Truth."
+  },
+  {
+    "test_case": "Verify safety standards violation by motor-cycle drivers or pillion riders should attract ₹1000 and/or cancellation of license for 3 months as per the latest Chhattisgarh schedule",
+    "status": "FAIL",
+    "reason": "The AI output fails to state the fines or penalties for safety standards violations and only requests clarification instead of providing the specific verified information of a ₹1,000 fine and 3-month license cancellation as mentioned in the Ground Truth."
+  },
+  {
+    "test_case": "Verify driving without helmet should attract ₹1000 and/or cancellation of license for 3 months as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output correctly states the ₹1,000 fine and 3-month license disqualification for driving without a helmet, matching the Ground Truth rule."
+  },
+  {
+    "test_case": "Verify unnecessary honking should attract ₹1000-₹2000 as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output correctly states the fine range of ₹1,000 for the first offence and ₹2,000 for subsequent offences as per Section 194F, matching the Ground Truth rule."
+  },
+  {
+    "test_case": "Verify not giving way to an ambulance or emergency vehicle should attract ₹10000 and/or imprisonment up to 6 months as per the latest Chhattisgarh schedule",
+    "status": "PASS",
+    "reason": "The AI output accurately states the ₹10,000 fine and imprisonment up to six months penalty under Section 194E, matching the Ground Truth details for not giving way to an ambulance."
+  },
+  {
+    "test_case": "Verify driving without a driving license or with an expired license should attract ₹5000 and/or imprisonment up to 3 months as per the latest applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI Output correctly states the penalty of up to ₹5,000 fine and/or imprisonment up to 3 months, matching the Ground Truth for driving without a valid license under Sec 181."
+  },
+  {
+    "test_case": "Verify an unauthorized person driving a vehicle should attract ₹5000 and/or imprisonment up to 3 months as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI Output correctly states the fine up to ₹5,000 and imprisonment up to 3 months, matching the Ground Truth's verified rule for unauthorized person driving."
+  },
+  {
+    "test_case": "Verify driving without or with an expired registration certificate for two-wheelers should attract ₹3000 for the first offense and ₹5000 for the subsequent offense as per the applicable rule interpretation",
+    "status": "FAIL",
+    "reason": "The AI output does not provide any fine amounts or penalties as per the Ground Truth and instead requests additional information, failing to state the ₹3000 and ₹5000 fines for driving without or with an expired two-wheeler registration."
+  },
+  {
+    "test_case": "Verify road tax non-payment should attract ₹500 as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI correctly explains the tax recovery and penalty process as per the Motor Vehicle Taxation Act, aligning with the Ground Truth that road tax non-payment is governed by the State Taxation Act with a typical ₹500 penalty."
+  },
+  {
+    "test_case": "Verify driving without or with an expired insurance policy should attract ₹2000 for the first offense and ₹4000 for the second or any subsequent offense and/or imprisonment up to 3 months as per the applicable rule interpretation",
+    "status": "FAIL",
+    "reason": "The AI output overstates the fine amounts and imprisonment durations for driving without insurance compared to the Ground Truth, which specifies strict fines of ₹2,000 for the first offence and ₹4,000 for subsequent offences with imprisonment up to 3 months, not the higher ranges and longer imprisonments mentioned."
+  },
+  {
+    "test_case": "Verify failure to report a change of address within thirty days should attract ₹500 for the first offense and ₹1000 for the second or subsequent offense as per the applicable rule interpretation",
+    "status": "FAIL",
+    "reason": "The AI Output incorrectly states the first offence fine as up to ₹100, whereas the Ground Truth specifies ₹500 for the first offence and ₹1000 for subsequent offences."
+  },
+  {
+    "test_case": "Verify violating air pollution standards should attract ₹2000 for the first offense and ₹5000 for the second or subsequent offense and disqualification for holding a license for 3 months as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI output provides a more precise and updated penalty structure with correct imprisonment and disqualification details, which supersedes the outdated fine amounts given in the Ground Truth."
+  },
+  {
+    "test_case": "Verify overloading should attract ₹20000 and ₹2000 per tonne of surplus weight plus off-loading charges as per the applicable rule interpretation",
+    "status": "FAIL",
+    "reason": "The AI Output incorrectly states the base fine as ₹10,000 instead of the verified ₹20,000 mentioned in the Ground Truth for overloading under Sec 194(1)."
+  },
+  {
+    "test_case": "Verify failure to provide passage to emergency vehicles should attract ₹10000 and/or imprisonment up to 6 months as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI output correctly states the penalty as ₹10,000 fine and/or imprisonment up to 6 months, matching the Ground Truth for failure to provide passage to emergency vehicles under Section 194E."
+  },
+  {
+    "test_case": "Verify racing and trails of speed should attract ₹5000 and/or imprisonment up to 3 months for the first offense, and ₹10000 and/or imprisonment up to 1 year for a subsequent offense as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI output correctly states the penalties for first and subsequent offences under Section 189 with fines up to ₹5,000 and imprisonment up to 6 months for the first offence, and fines up to ₹10,000 and imprisonment up to 1 year for subsequent offences, which matches or reasonably extends the Ground Truth."
+  },
+  {
+    "test_case": "Verify wrong parking should attract ₹500 for the first violation and ₹1000 for the second or subsequent violation as per the applicable rule interpretation",
+    "status": "FAIL",
+    "reason": "The AI states the same penalty for subsequent violations, contradicting the Ground Truth which specifies ₹500 for the first and ₹1,000–₹1,500 for subsequent wrong parking offences."
+  },
+  {
+    "test_case": "Verify driving without helmet should attract ₹1000 and license suspension for 3 months as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI correctly notes that the helmet rule and its associated ₹1,000 fine and 3-month license suspension apply only to two-wheelers, aligning with the Ground Truth's section on driving without helmet."
+  },
+  {
+    "test_case": "Verify offences by a juvenile should attract a fine of ₹25000 and imprisonment up to 3 years for the guardian or owner, with vehicle registration cancelled for 1 year and the juvenile not eligible for a license until 25 years as per the applicable rule interpretation",
+    "status": "PASS",
+    "reason": "The AI output accurately reflects the ₹25,000 fine, imprisonment up to 3 years for the guardian or owner, vehicle registration cancellation for 1 year, and license ineligibility until age 25 as stated in the Ground Truth."
+  }
+]

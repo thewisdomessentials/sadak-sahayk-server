@@ -28,7 +28,7 @@ try:
         get_db_session,
     )
     from .models import BranchChatRequest, ChatRequest, DeviceRegisterRequest
-    from .rag import (
+    from .rag import ( 
         retrieve_context,
         generate_response,
         generate_structured_response,
@@ -332,6 +332,8 @@ async def chat(
             "needs_followup": structured.get("needs_followup", False),
             "quick_replies": structured.get("quick_replies", []),
             "intent": structured.get("intent", "general_info"),
+            "enforcement_agency": structured.get("enforcement_agency", "Unknown"),
+            "resolution_authority": structured.get("resolution_authority", "Unknown"),
         }
 
     except Exception as e:

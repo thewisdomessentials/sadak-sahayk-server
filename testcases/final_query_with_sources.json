@@ -1,0 +1,134 @@
+{
+  "AI Output": {
+    "answer": "Do you want information related to possession of a forged document under traffic laws or other laws?",
+    "needs_followup": true,
+    "quick_replies": [
+      "Traffic Law (Motor Vehicles Act)",
+      "Criminal Law (BNS/BNSS)",
+      "Other laws"
+    ],
+    "intent": "offense_possession_forged_document"
+  },
+  "Top_20_Sources": [
+    {
+      "text": "(3) Whoever wrongfully confines any person for three days, or more, shall be punished\nwith imprisonment of either description for a term which may extend to three years, or with\nfine which may extend to ten thousand rupees, or with both.\n(4) Whoever wrongfully confines any person for ten days or more, shall be punished\nwith imprisonment of either description for a term which may extend to five years, and shall\nalso be liable to fine which shall not be less than ten thousand rupees.\n(5) Whoever keeps any person in wrongful confinement, knowing that a writ for the\nliberation of that person has been duly issued, shall be punished with imprisonment of either\ndescription for a term which may extend to two years in addition to any term of imprisonment\nto which he may be liable under any other se",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.5120621
+    },
+    {
+      "text": "able.\nAny Magistrate.\ncaused.\nor fine of 10,000 rupees,\nor both.\n126(2)\nWrongfully restraining any Simple imprisonment for\nCognizable.\nBailable.\nAny Magistrate.\nperson.\n1 month, or fine of 5,000\nrupees, or both.\n127(2)\nWrongfully confining any\nImprisonment for 1 year,\nCognizable.\nBailable.\nAny Magistrate.\nperson.\nor fine of 5,000 rupees,\nor both.\n127(3)\nWrongfully confining for\nImprisonment for 3 years,\nCognizable.\nBailable.\nAny Magistrate.\nthree or more days.\nor fine of 10,000 rupees,\nor both.\n127(4)\nWrongfully confining for\nImprisonment for 5 years\nCognizable.\nNon-bailable.\nMagistrate of the first\n10 or more days.\nand fine of 10,000 rupees.\nclass.\n127(5)\nKeeping any person in\nImprisonment for 2 years\nCognizable.\nBailable.\nMagistrate of\nwrongful confinement,\nin addition to any term of\nthe",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.50411284
+    },
+    {
+      "text": "t and shall also be liable to fine.\n(7) Whoever wrongfully confines any person for the purpose of extorting from the\nperson confined, or from any person interested in the person confined, any property or\nvaluable security or of constraining the person confined or any person interested in such\nperson to do anything illegal or to give any information which may facilitate the commission\nof an offence, shall be punished with imprisonment of either description for a term which may\nextend to three years, and shall also be liable to fine.\n(8) Whoever wrongfully confines any person for the purpose of extorting from the\nperson confined or any person interested in the person confined any confession or any\ninformation which may lead to the detection of an offence or misconduct, or for the purpose\nof",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.4985855
+    },
+    {
+      "text": "prevented from\nproceeding in any direction beyond the circumscribing line of wall.Awrongfully confines Z.\n(b)Aplaces men with firearms at the outlets of a building, and tells Z that they will fire\nat Z if Z attempts to leave the building.A wrongfully confines Z.\n(2) Whoever wrongfully confines any person shall be punished with imprisonment of\neither description for a term which may extend to one year, or with fine which may extend to\nfive thousand rupees, or with both.\nAct\nendangering\nlife or personal\nsafety of\nothers.\nWrongful\nrestraint.\nWrongful\nconfinement.\nSec. 1]\nTHE GAZETTE OF INDIA EXTRAORDINARY\n41\n____________________________________________________________\n_____________________________________________________________\n____________________________________________________________\n__",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.4942217
+    },
+    {
+      "text": "was charged with, or liable to be apprehended for, an\noffence punishable with death; or\n(b) with imprisonment of either description for a term which may extend to\nthree years, with or without fine, if the person in confinement, or who ought to have\nbeen apprehended, was charged with, or liable to be apprehended for, an offence\npunishable with imprisonment for life or imprisonment for a term which may extend\nto ten years; or\n(c) with imprisonment of either description for a term which may extend to two\nyears, with or without fine, if the person in confinement, or who ought to have been\napprehended, was charged with, or liable to be apprehended for, an offence\npunishable with imprisonment for a term less than ten years.\n260. Whoever, being a public servant, legally bound as such public serv",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.492043
+    },
+    {
+      "text": "for 2 years\nCognizable.\nBailable.\nMagistrate of\nwrongful confinement,\nin addition to any term of\nthe first class.\nknowing that a writ has\nimprisonment to under\nbeen issued for his liberation.\nany other section and fine.\n127(6)\nWrongful confinement in\nImprisonment for 3 years\nCognizable.\nBailable.\nMagistrate of the first\nsecret.\nin addition to other\nclass.\npunishment which he is\nliable to and fine.\n127(7)\nWrongful confinement for\nImprisonment for 3 years\nCognizable.\nBailable.\nAny Magistrate.\nthe purpose of extorting\nand fine.\nproperty, or constraining to\nan illegal act, etc.\n127(8)\nWrongful confinement for\nImprisonment for 3 years\nCognizable.\nBailable.\nAny Magistrate.\nthe purpose of extorting\nand fine.\nconfession or information,\nor for compelling restoration\nof property, etc.\n166\nTHE GAZETT",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.48464724
+    },
+    {
+      "text": "ssary\ndelay and subject to the provisions herein contained as to bail, take or send the person\narrested before a Magistrate having jurisdiction in the case, or before the officer in charge\nof a police station.\n58. No police officer shall detain in custody a person arrested without warrant for a\nlonger period than under all the circumstances of the case is reasonable, and such period\nshall not, in the absence of a special order of a Magistrate under section 187, exceed\ntwenty-four hours exclusive of the time necessary for the journey from the place of arrest to\nthe Magistrate's Court, whether having jurisdiction or not.\n59. Officers in charge of police stations shall report to the District Magistrate, or, if\nhe so directs, to the Sub-divisional Magistrate, the cases of all persons arrested",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.4836848
+    },
+    {
+      "text": "such refusal, and  for his refusal has been ordered to be detained in custody\nfor..............................................(term of detention adjudged);\nThis is to authorise and require you to take the said..............................................(name)\ninto custody, and him safely to keep in your custody for the period\nof..............................................days, unless in the meantime he shall consent to be examined\nand to answer the questions asked of him, or to produce the document called for from him,\nand on the last of the said days, or forthwith on such consent being known, to bring him\nbefore this Court to be dealt with according to law, returning this warrant with an endorsement\ncertifying the manner of its execution.\nDated, this..................................",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.47756505
+    },
+    {
+      "text": "nd to two years in addition to any term of imprisonment\nto which he may be liable under any other section of this Chapter and shall also be liable to\nfine.\n(6) Whoever wrongfully confines any person in such manner as to indicate an intention\nthat the confinement of such person may not be known to any person interested in the\nperson so confined, or to any public servant, or that the place of such confinement may not\nbe known to or discovered by any such person or public servant as hereinbefore mentioned,\nshall be punished with imprisonment of either description for a term which may extend to\nthree years in addition to any other punishment to which he may be liable for such wrongful\nconfinement and shall also be liable to fine.\n(7) Whoever wrongfully confines any person for the purpose of ex",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.47465608
+    },
+    {
+      "text": "servant legally bound as such public servant to keep\nin confinement any person charged with or convicted of any offence or lawfully committed\nto custody, negligently suffers such person to escape from confinement, shall be punished\nwith simple imprisonment for a term which may extend to two years, or with fine, or with\nboth.\n262. Whoever intentionally offers any resistance or illegal obstruction to the lawful\napprehension of himself for any offence with which he is charged or of which he has been\nconvicted, or escapes or attempts to escape from any custody in which he is lawfully\ndetained for any such offence, shall be punished with imprisonment of either description\nfor a term which may extend to two years, or with fine, or with both.\nExplanation.—The punishment in this section is in addi",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.46282765
+    },
+    {
+      "text": "s that the\nconfinement amounts to an offence, he may issue a search-warrant, and the person to\nwhom such warrant is directed may search for the person so confined; and such search\nshall be made in accordance therewith, and the person, if found, shall be immediately taken\nbefore a Magistrate, who shall make such order as in the circumstances of the case seems\nproper.\n101. Upon complaint made on oath of the abduction or unlawful detention of a\nwoman, or a female child for any unlawful purpose, a District Magistrate, Sub-divisional\nMagistrate or Magistrate of the first class may make an order for the immediate restoration\nof such woman to her liberty, or of such female child to her parent, guardian or other person\nhaving the lawful charge of such child, and may compel compliance with such ord",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.4592536
+    },
+    {
+      "text": "al force\nin attempt to\nwrongfully\nconfine a\nperson.\n44\nTHE GAZETTE OF INDIA EXTRAORDINARY\n[Part II—\n____________________________________________________________\n_____________________________________________________________\n____________________________________________________________\n___________________________________________________________\n________________________________________________________\n_____________________________________________________________",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.45919725
+    },
+    {
+      "text": "TWE Traffic-Law AI Knowledge Base — Clean Current-Law Edition\nPage 2\nProvision\nPrimary use\nKey guardrail\n207\nVehicle detention\nSpecific statutory triggers apply; not every challan permits detention.",
+      "source": "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
+      "language": "en",
+      "similarity_score": 0.45903412
+    },
+    {
+      "text": "(b) with imprisonment of either description for a term which may extend to\nseven years, with or without fine, if the person in confinement or who ought to have\nbeen apprehended, is subject, by a sentence of a Court, or by virtue of a commutation\nof such sentence, to imprisonment for life or imprisonment for a term of ten years, or\nupwards; or\n(c) with imprisonment of either description for a term which may extend to\nthree years, or with fine, or with both, if the person in confinement or who ought to\nhave been apprehended, is subject by a sentence of a Court to imprisonment for a\nterm not extending to ten years or if the person was lawfully committed to custody.\n261. Whoever, being a public servant legally bound as such public servant to keep\nin confinement any person charged with or convi",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.45674482
+    },
+    {
+      "text": "may think fit for a term not exceeding seven days in\nthe aggregate; and, on the expiry of the period of detention so authorised, the accused\nperson shall be released on bail except where an order for further detention of the accused\nperson has been made by a Magistrate competent to make such order; and, where an order\nfor such further detention is made, the period during which the accused person was detained\nin custody under the orders made by an Executive Magistrate under this sub-section, shall\nbe taken into account in computing the period specified in sub-section (3):\nProvided that before the expiry of the period aforesaid, the Executive Magistrate shall\ntransmit to the nearest Judicial Magistrate the records of the case together with a copy of\nthe entries in the diary relating to the",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.4496665
+    },
+    {
+      "text": "ed further that the Court may, after hearing the Public Prosecutor and for\nreasons to be recorded by it in writing, order the continued detention of such person for a\nperiod longer than one-half of the said period or release him on bail bond instead of his\nbond:\nProvided also  that no such person shall in any case be detained during the period of\ninvestigation, inquiry or trial for more than the maximum period of imprisonment provided\nfor the said offence under that law.\nExplanation.—In computing the period of detention under this section for granting\nbail, the period of detention passed due to delay in proceeding caused by the accused shall\nbe excluded.\n(2) Notwithstanding anything  in sub-section (1), and subject to the third proviso\nthereof,  where an investigation, inquiry or trial in",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.44718164
+    },
+    {
+      "text": "he\nmeaning of this section.\nIllustration.\nA obstructs a path along which Z has a right to pass,A not believing in good faith that\nhe has a right to stop the path. Z is thereby prevented from passing. A wrongfully\nrestrains Z.\n(2) Whoever wrongfully restrains any person shall be punished with simple\nimprisonment for a term which may extend to one month, or with fine which may extend to\nfive thousand rupees, or with both.\n127. (1) Whoever wrongfully restrains any person in such a manner as to prevent that\nperson from proceedings beyond certain circumscribing limits, is said “wrongfully to confine”\nthat person.\nIllustrations.\n(a) A causes Z to go within a walled space, and locks Z in. Z is thus prevented from\nproceeding in any direction beyond the circumscribing line of wall.Awrongfully confi",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.44598427
+    },
+    {
+      "text": "ther an accused person was produced\nbefore the Magistrate as required under sub-section (4), the production of the accused\nperson may be proved by his signature on the order authorising detention or by the order\ncertified by the Magistrate as to production of the accused person through the audio-video\nelectronic means, as the case may be:\nProvided that in case of a woman under eighteen years of age, the detention shall be\nauthorised to be in the custody of a remand home or recognised social institution:\nProvided further that no person shall be detained otherwise than in police station\nunder police custody or in prison under judicial custody or a place declared as prison by the\nCentral Government or the State Government.\n(6) Notwithstanding anything contained in sub-section (1) to sub-secti",
+      "source": "data/BNSS_250884_2_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.44540158
+    },
+    {
+      "text": "264. Whoever, being a public servant legally bound as such public servant to\napprehend, or to keep in confinement, any person in any case not provided for in section 259,\nsection 260 or section 261, or in any other law for the time being in force, omits to apprehend\nthat person or suffers him to escape from confinement, shall be punished—\n(a) if he does so intentionally, with imprisonment of either description for a term\nwhich may extend to three years, or with fine, or with both; and\n(b) if he does so negligently, with simple imprisonment for a term which may\nextend to two years, or with fine, or with both.\n265. Whoever, in any case not provided for in section 262 or section 263 or in any\nother law for the time being in force, intentionally offers any resistance or illegal obstruction\nto",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.44491857
+    },
+    {
+      "text": "nths, or with fine which may extend to five\nthousand rupees, or with both;\n(b) where grievous hurt is caused, shall be punished with imprisonment of\neither description for a term which may extend to three years, or with fine which may\nextend to ten thousand rupees, or with both.\nOf  wrongful restraint and wrongful confinement\n126. (1) Whoever voluntarily obstructs any person so as to prevent that person from\nproceeding in any direction in which that person has a right to proceed, is said wrongfully to\nrestrain that person.\nException.—The obstruction of a private way over land or water which a person in\ngood faith believes himself to have a lawful right to obstruct, is not an offence within the\nmeaning of this section.\nIllustration.\nA obstructs a path along which Z has a right to pass,A not",
+      "source": "data/BNS_250883_english_01042024.pdf",
+      "language": "en",
+      "similarity_score": 0.44461903
+    }
+  ]
+}
