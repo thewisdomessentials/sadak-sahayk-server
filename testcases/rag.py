@@ -53,29 +53,25 @@ Return only valid JSON with this shape:
   "answer": "string",
   "needs_followup": true,
   "quick_replies": ["string"],
-  "intent": "string",
-  "enforcement_agency": "string",
-  "resolution_authority": "string"
+  "intent": "string"
 }
 
 Rules for JSON:
-- Return valid JSON only. Do not wrap it in markdown fences.
+- Return valid JSON only.
+- Do not wrap it in markdown fences.
 - `quick_replies` can be an empty array.
 - `needs_followup` must be true when the query is ambiguous and a clarifying choice would meaningfully change the answer.
 - When `needs_followup` is true, `answer` should be a short clarifying question, and `quick_replies` must contain 2–4 clickable options.
-- When `needs_followup` is false, `answer` must be the full structured response.
+- When `needs_followup` is false, `answer` must be the full structured response with the required headers.
 - `intent` should be a short label like `penalty_lookup`, `violation_check`, `seizure_info`, or `general_info`.
-- `enforcement_agency` (JSON field): Populate based on mapping principles.
-- `resolution_authority` (JSON field): Populate based on mapping principles.
 
 FOLLOW-UP TRIGGER CONDITIONS (set needs_followup: true when ANY of these apply):
 - Vehicle type is not mentioned AND the penalty differs across vehicle types (two-wheeler vs four-wheeler vs commercial).
 - The offence type is vague and multiple violations could apply (e.g. "police stopped me" without reason).
 - The penalty depends on whether it is a first offence or a repeat offence.
 - The enforcement action depends on a specific circumstance the user has not stated (e.g. "can police seize my vehicle" without stating why).
-- Engine number/Chassis number not provided in query and are needed to decide limits and fine for example Two-Wheeler Noise LimitsT(CPCB) regulates motorcycle and scooter noise based on engine displacement as follows:Up to 80 cc: Max limit of \\(75 \\text{ dB(A)}\\)81 cc to 175 cc
+- Engine number/Chassis number not provided in query and are needed to decide limits and fine for example Two-Wheeler Noise LimitsT(CPCB) regulates motorcycle and scooter noise based on engine displacement as follows:Up to 80 cc: Max limit of \(75 \text{ dB(A)}\)81 cc to 175 cc
 DO NOT set needs_followup: true for:
-- Queries that explicitly mention specific vehicles like "motorcycle", "bike", "scooter" (implies two-wheeler), "car", "SUV" (implies four-wheeler), or "truck", "bus" (implies heavy/commercial). You must infer the category from these terms instead of asking a follow-up.
 - Queries that are complete and unambiguous.
 - Non-traffic questions (use the domain restriction refusal instead).
 - Image-based queries (answer from visible evidence only).
@@ -88,60 +84,23 @@ You MUST respond using the language specified by the UI language setting.
 UI Language:
 {ui_language}
 
-AUTHORITY MAPPING PRINCIPLES:
-Use these rules to deduce the Enforcement Agency and Resolution Authority:
-1. Compoundable vs Non-Compoundable: If the penalty includes mandatory imprisonment (e.g., Section 185 Drunk Driving, Section 184 Dangerous Driving), it MUST go to Court. (Enforcement: Traffic Police | Resolution: Court)
-2. Moving vs Administrative: On-road behavioral violations (speeding, red light, no helmet) are enforced by Traffic Police via Spot Fine/Portal. Administrative violations (Permits, Fitness, Taxes) belong to the RTO.
-3. Shared Jurisdiction: Basic documents (License, PUC, Insurance) can be checked by both Police and RTO (Enforcement: Traffic Police / RTO | Resolution: Portal / Spot Fine).
-
-FORMATTING RULE:
-At the very end of your response text (whether inside a JSON 'answer' field or streaming plain text), you MUST append these two lines strictly formatted:
-
-Enforcement Agency: [Agency Name]
-Resolution Authority: [Authority Name]
-
 ABSOLUTE RULES:
 - If the UI Language is "hi", respond ONLY in Hindi.
 - If the UI Language is "en", respond ONLY in English.
 - Never display the UI language value in the response.
-- PRIMARY PROVISION RULE: Every violation answer must identify the primary statutory provision governing the actual offence. Supporting provisions may be listed separately but must never replace the primary offence provision.
-
-NORMALIZATION RULE (HINDI/HINGLISH):
-Understand Hindi, Hinglish, transliterated Hindi and colloquial traffic terminology, but map the facts to the precise legal concept before selecting a section or deciding if a penalty/compounding amount applies. For example, map:
-- चालान -> challan / enforcement
-- लाइसेंस घर पर है -> licence not produced
-- लाइसेंस सस्पेंड -> suspended/disqualified licence
-- परमिट नहीं है -> no permit
-- परमिट है लेकिन रूट गलत -> permit-condition violation
-- फिटनेस है -> fitness certificate
-- कागज पूरे हैं -> documents claimed valid — verify
-- मोबाइल हाथ में -> handheld mobile-phone use
-- शराब की गंध -> suspicion requiring testing
-- ओवरलोड -> excess weight requiring weighment
-- एल प्लेट नहीं -> learner-condition violation
-- नंबर प्लेट गंदी -> registration mark obscured/unreadable
-- मालिक गाड़ी चला रहा था? -> driver identity must be established
-
-MANDATORY INTERNAL REASONING (CHAIN OF THOUGHT):
-Before generating the final output, you MUST internally follow these 5 steps strictly in order:
-1. Violation Extraction: Break the user's scenario down into distinct individual violations (e.g. 1. Handheld mobile phone, 2. Seat-belt violation, 3. Expired insurance).
-2. Vehicle Category Identification: Explicitly determine the vehicle category (Two-wheeler / Car / Truck / Bus / Auto / Other). The applicable provision often depends on this.
-3. Exact Legal Provision Retrieval: Search the provided context for the exact legal provision corresponding to each violation for the identified vehicle.
-4. Mandatory Section Verification: Verify: Does the retrieved Section actually describe the violation? If NO, do not guess or hallucinate. Only use sections explicitly supported by the text.
-5. Separate Penalty Retrieval: Find the penalty in the authoritative text separately from the violation. Is the penalty amount explicitly supported by the text for this specific violation and vehicle? If YES, provide it. If NO or ambiguous, DO NOT GUESS. You must state: "Penalty requires verification from the current applicable notification/schedule."
 
 RESPONSE FORMAT (MANDATORY — only when needs_followup is false)
 If LANGUAGE=en, use exactly these headers:
 Violation:
 Relevant Law / Section:
-Penalty: (If the penalty amount is not clearly verified from the source text , mention it from which source and state exactly: "Penalty requires verification from the current applicable notification/schedule.")
+Penalty:
 Enforcement Action:
 Short Explanation:
 
 If LANGUAGE=hi, use exactly these headers:
 उल्लंघन:
 प्रासंगिक कानून / धारा:
-दण्ड: (If the penalty amount is not clearly verified from the source text, state exactly: "जुर्माने की पुष्टि वर्तमान लागू अधिसूचना/अनुसूची से की जानी चाहिए।")
+दण्ड:
 प्रवर्तन कार्यवाही:
 संक्षिप्त विवरण:
 
@@ -164,9 +123,7 @@ Legal sources you may use:
 - Official Gazette Documents
 - State-specific policies (e.g., State EV policies, Taxation Acts, Bus Transport Rules)
 
-CRITICAL RULE: You must base all criminal offence answers exclusively on the Bharatiya Nyaya Sanhita (BNS) and BNSS. Under no circumstances should you cite the IPC (Indian Penal Code) or CrPC. If a user specifically asks about an old IPC section, acknowledge it, but DO NOT use the exact acronym 'IPC' or 'CrPC' in your response. Refer to it strictly as 'the former penal code' or 'the old section', and provide the current governing law under the new BNS framework. Furthermore, LIMIT all criminal-law content strictly to evidence protection, preservation, documentation, and required protocol relevant to traffic enforcement / incident handling. Do NOT provide broad criminal legal advice beyond traffic incident protocol.
-
-PRIORITY RULE: If there is conflicting information (e.g. fine amounts) across different sources, you MUST give maximum priority/weightage to the source 'data/MVA 1988 till 2025 may.pdf' as it is the most up-to-date document.
+CRITICAL RULE: You must base all criminal offence answers exclusively on the Bharatiya Nyaya Sanhita (BNS) and BNSS. Under no circumstances should you cite the IPC (Indian Penal Code) or CrPC. If a user specifically asks about an old IPC section, acknowledge it, but DO NOT use the exact acronym 'IPC' or 'CrPC' in your response. Refer to it strictly as 'the former penal code' or 'the old section', and provide the current governing law under the new BNS framework.
 
 Never invent laws, sections, penalties, or enforcement actions.
 
@@ -308,17 +265,11 @@ def retrieve_context(query: str, limit: int = 10):
         with_vectors=False,
     ).points
 
-    # Prioritize 'data/MVA 1988 till 2025 may.pdf' by sorting it to the top of the context
-    results.sort(key=lambda x: 0 if x.payload.get("source", "") == "data/MVA 1988 till 2025 may.pdf" else 1)
-
     context_chunks = []
     total_tokens = 0
 
     for result in results:
-        source = result.payload.get("source", "Unknown")
-        chunk_text = result.payload.get("text", "")
-        chunk = f"Source: {source}\nText: {chunk_text}"
-        
+        chunk = result.payload.get("text", "")
         chunk_tokens = count_tokens(chunk)
         if total_tokens + chunk_tokens > MAX_CONTEXT_TOKENS:
             break
@@ -353,28 +304,19 @@ def generate_response(
                 "answer": fallback_msg,
                 "needs_followup": False,
                 "quick_replies": [],
-                "intent": "safety_override",
-                "enforcement_agency": "N/A",
-                "resolution_authority": "N/A"
+                "intent": "safety_override"
             }
         return fallback_msg
 
     if expect_json:
         parsed = _safe_json_loads(output_text)
         if parsed is not None:
-            # Ensure the new fields exist even if the LLM hallucinated them away
-            if "enforcement_agency" not in parsed:
-                parsed["enforcement_agency"] = "Traffic Police / RTO"
-            if "resolution_authority" not in parsed:
-                parsed["resolution_authority"] = "Court / Spot Fine"
             return parsed
         return {
             "answer": output_text,
             "needs_followup": False,
             "quick_replies": [],
             "intent": "general_info",
-            "enforcement_agency": "Unknown",
-            "resolution_authority": "Unknown"
         }
     return output_text
 
@@ -387,27 +329,13 @@ def stream_response(
     conversation_history: str | None = None,
 ):
     openai_client = get_openai_client()
-    safe_query = preprocess_search_query(query)
-
-    accumulated_text = ""
-    fallback_triggered = False
 
     with openai_client.responses.stream(
-        **get_response_kwargs(safe_query, context, language, model, conversation_history)
+        **get_response_kwargs(query, context, language, model, conversation_history)
     ) as stream:
         for event in stream:
             if event.type == "response.output_text.delta":
-                accumulated_text += event.delta
-                
-                # SAFETY NET: Check for IPC/CrPC hallucination mid-stream
-                if not fallback_triggered and re.search(r'\b(IPC|CrPC)\b', accumulated_text, re.IGNORECASE):
-                    fallback_triggered = True
-                    logger.warning("Regex output filter caught IPC hallucination in stream. Aborting stream.")
-                    yield "\n\n[Error: The system attempted to cite outdated IPC/CrPC laws. Please verify against current BNS/BNSS guidelines.]"
-                    break
-                
-                if not fallback_triggered:
-                    yield event.delta
+                yield event.delta
 
 
 def generate_structured_response(
@@ -436,8 +364,6 @@ def generate_structured_response(
         "needs_followup": False,
         "quick_replies": [],
         "intent": "general_info",
-        "enforcement_agency": "Unknown",
-        "resolution_authority": "Unknown"
     }
 
 

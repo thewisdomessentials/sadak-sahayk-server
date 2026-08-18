@@ -1,0 +1,226 @@
+[
+  {
+    "TC_ID": "EN002",
+    "Language": "English",
+    "User Query": "A motorcycle rider was intercepted by traffic police for riding without wearing a protective helmet. According to the latest Motor Vehicles Act, which section should be applied? Mention the exact section, penalty, and legal source.",
+    "Expected MVA": "Section 194D",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Riding a motorcycle without wearing a protective helmet.\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 129 and Section 194D.\nPenalty: A fine of one thousand rupees and disqualification from holding a licence for a period of three months.\nEnforcement Action: Fine imposed by traffic authorities and disqualification of the rider's driving licence for three months.\nShort Explanation: Every person driving or riding a motorcycle in a public place must wear protective headgear conforming to Bureau of Indian Standards. Failure to do so attracts a fine and licence suspension as per Section 194D of the Motor Vehicles Act, 1988.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "EN003",
+    "Language": "English",
+    "User Query": "A driver of a private four-wheeler was found driving without wearing a seat belt during a routine traffic inspection. Which provision applies under the Motor Vehicles Act? Mention section, penalty, and source.",
+    "Expected MVA": "Section 194B",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Driving a private four-wheeler without wearing a seat belt\nRelevant Law / Section: Motor Vehicles Act, 1988, Section 194B\nPenalty: Fine of one thousand rupees\nEnforcement Action: Imposition of fine by the authorized officer; no imprisonment\nShort Explanation: According to Section 194B of the Motor Vehicles Act, any person driving a motor vehicle without wearing a safety belt or carrying passengers not wearing seat belts shall be liable to a fine of one thousand rupees. This applies to private four-wheelers as well as other motor vehicles mandated to have seat belts.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "EN007",
+    "Language": "English",
+    "User Query": "A vehicle was found operating on a public road without a valid third-party insurance policy. Which section applies? Mention the section and explain.",
+    "Expected MVA": "Section 196",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Operating a motor vehicle in a public place without a valid third-party insurance policy.\nRelevant Law / Section: Motor Vehicles Act, 1988, Chapter on Insurance (Section 146 and related provisions).\nPenalty: Fine up to Rs. 2,000 or imprisonment up to 3 months or both for driving without the required insurance.\nEnforcement Action: Confiscation of the vehicle, suspension of driving licence, and legal proceedings can be initiated.\nShort Explanation: The Motor Vehicles Act mandates that no person shall use or allow the use of a motor vehicle in a public place unless there is a valid third-party insurance policy in force for that vehicle. This insurance covers liability for injury, death, or damage caused to third parties. Driving without such insurance is a legal offence attracting penalties and enforcement actions to ensure public protection and compliance.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "EN010",
+    "Language": "English",
+    "User Query": "What is the legal rule governing tinted glass on motor vehicles? Please mention the applicable Central Motor Vehicles Rules provision and explain the requirement.",
+    "Expected MVA": null,
+    "Expected CMVR": "Rule 100",
+    "AI Output": {
+      "answer": "Violation: Use of tinted glass that does not comply with prescribed visual light transmission limits or Indian Standards.\nRelevant Law / Section: Central Motor Vehicles Rules (CMVR) Rule 100 and Rule 123, amended provisions regarding safety glass and glazing.\nPenalty: Fine as per Motor Vehicles Act, 1988 for non-compliance; typically up to ₹5,000, subject to enforcement authority discretion.\nEnforcement Action: Vehicle may be ordered to be fitted with compliant safety glass; repeated violation can lead to penalty and possible vehicle immobilization.\nShort Explanation: Under CMVR, the windscreen and rear window glass of a motor vehicle must maintain a visual light transmission of not less than 70%, while side windows must maintain at least 50% visual light transmission, conforming to Indian Standard IS 2553 (Part 2) (Revision 1): 2019 or the latest amendments. The glass must be laminated safety glass where applicable, especially for front windscreens for vehicles other than two-wheelers and agricultural tractors. These provisions ensure driver visibility and public safety, restricting overly dark or non-conforming tinted films on vehicle windows.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "tinted_glass_regulations"
+    }
+  },
+  {
+    "TC_ID": "HI002",
+    "Language": "Hindi",
+    "User Query": "यदि कोई व्यक्ति बिना हेलमेट के मोटरसाइकिल चलाते हुए पकड़ा जाता है, तो उस पर मोटर वाहन अधिनियम की कौन-सी धारा लागू होगी?",
+    "Expected MVA": "MVA Section 194D",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "उल्लंघन: हेलमेट न पहनना\nप्रासंगिक कानून / धारा: मोटर वाहन अधिनियम, धारा 194D\nदण्ड: एक हजार रुपये का जुर्माना और तीन माह के लिए लाइसेंस निलंबित हो सकता है\nप्रवर्तन कार्यवाही: जुर्माना वसूलना और लाइसेंस निलंबन की कार्रवाई\nसंक्षिप्त विवरण: मोटरसाइकिल चालक या पीछे बैठे व्यक्ति द्वारा हेलमेट न पहनने पर यह दण्ड लगाया जाता है जो सुरक्षा नीतियों के उल्लंघन के अंतर्गत आता है।",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI006",
+    "Language": "Hindi",
+    "User Query": "यदि वाहन का थर्ड पार्टी बीमा नहीं है, तो कौन-सी धारा लागू होगी?",
+    "Expected MVA": "MVA Section 196",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Driving a motor vehicle without valid third party insurance.\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 147\nPenalty: Fine which may extend to ₹2000.\nEnforcement Action: Vehicle may be impounded or detained until valid insurance is produced.\nShort Explanation: It is mandatory to have third party insurance for all motor vehicles in India. Driving without this insurance is a violation under Section 147, attracting a fine and possible vehicle detention.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI008",
+    "Language": "Hindi",
+    "User Query": "यदि कोई कमर्शियल वाहन बिना परमिट के चलाया जा रहा है, तो कौन-सी धारा लागू होगी?",
+    "Expected MVA": "MVA Section 192A",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Please specify the type of commercial vehicle for accurate information: heavy goods vehicle, passenger transport vehicle (bus), or other commercial vehicle?",
+      "needs_followup": true,
+      "quick_replies": [
+        "Heavy Goods Vehicle",
+        "Passenger Transport Vehicle (Bus)",
+        "Other Commercial Vehicle"
+      ],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI009",
+    "Language": "Hindi",
+    "User Query": "वाहन के शीशों पर काली फिल्म (Tinted Glass) लगाने के संबंध में CMVR का कौन-सा नियम लागू होता है?",
+    "Expected MVA": "CMVR Rule 100",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Using excessively dark or unauthorized tinted glass on vehicle windows\nRelevant Law / Section: CMVR Rule 100 (2) and Rule 101 (3), IS: 2553 Part 2:1992\nPenalty: Fine up to ₹1,000 or as prescribed by the local authority\nEnforcement Action: Removal of unauthorized tint film and fine collection by Traffic Police\nShort Explanation: Central Motor Vehicles Rules specify limits on light transmission through vehicle glass to ensure driver visibility and road safety. Dark or non-compliant tints violating the minimum light transmission of 70% for windscreen and 50% for side windows are not permitted.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HG002",
+    "Language": "Hinglish",
+    "User Query": "Helmet bina bike chalane par kaunsi section lagti hai? Sirf latest MVA ke hisaab se batao.",
+    "Expected MVA": "MVA Section 194D",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Violation: Riding a motorcycle without wearing a protective helmet\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 129\nPenalty: Fine of one thousand rupees under Section 194D\nEnforcement Action: Imposition of fine; helmet must conform to standards prescribed by the Central Government (Bureau of Indian Standards)\nShort Explanation: Every person above 4 years of age driving or riding on a motorcycle in a public place must wear protective headgear (helmet) conforming to prescribed standards. Not wearing a helmet attracts a fine and is a punishable offence.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HG005",
+    "Language": "Hinglish",
+    "User Query": "Driving licence expire ho gaya hai aur main vehicle chala raha tha. Kaunsi legal provision apply hogi?",
+    "Expected MVA": "Relevant MVA licence provisions",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Which type of vehicle are you driving? Two-wheeler, Four-wheeler/Car, or Commercial/Heavy vehicle?",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HG006",
+    "Language": "Hinglish",
+    "User Query": "Insurance expire hone ke baad vehicle chalaya to kaunsi section lagegi?",
+    "Expected MVA": "MVA Section 196",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Please specify the type of vehicle for which you want to know the provision on driving after insurance expiration.",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "insurance_violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI012",
+    "Language": "Hindi",
+    "User Query": "बुलेट मोटरसाइकिल में मॉडिफाइड साइलेंसर लगाकर तेज आवाज (पटाखा) निकालने पर कौन सी धारा और CMVR नियम लगेगा?",
+    "Expected MVA": "Section 190(2)",
+    "Expected CMVR": "Rule 119, Rule 120",
+    "AI Output": {
+      "answer": "Violation: Using a modified silencer causing excessive noise (tampered silencer) on a motorcycle\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 120 (Silencers) and Central Motor Vehicles Rules (CMVR) Rule 119 (Horn and Other Audible Signalling Devices)\nPenalty: Fine up to ₹1,000 or as prescribed by the Motor Vehicles Act and CMVR rules\nEnforcement Action: Police may issue a challan for noise pollution violation and order removal or replacement of the modified silencer\nShort Explanation: Modified silencers that emit excessive or alarming noise are prohibited under Section 120 of the Motor Vehicles Act and rules under CMVR. Vehicles must be equipped with silencers that reduce exhaust noise as per standards. Such modifications causing loud noise (like the “patakha” sound) violate these provisions and attract penalties.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI013",
+    "Language": "Hindi",
+    "User Query": "कमर्शियल गाड़ी के साइड मिरर टूटे हुए हैं और वाइपर काम नहीं कर रहे। इस स्थिति में CMVR के कौन से नियम का उल्लंघन हुआ है?",
+    "Expected MVA": "Section 177",
+    "Expected CMVR": "Rule 104, Rule 122",
+    "AI Output": {
+      "answer": "Violation of side mirrors and windscreen wiper rules in commercial vehicle falls under CMVR Rule 125(2) for mirrors and Rule 101(1) for power operated windscreen wipers. The penalty applies for missing or non-functional mirrors and wipers as per these rules.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HI014",
+    "Language": "Hindi",
+    "User Query": "एक कार एम्बुलेंस को रास्ता नहीं दे रही थी। इसके लिए नए मोटर वाहन अधिनियम के तहत क्या सजा है?",
+    "Expected MVA": "Section 194E",
+    "Expected CMVR": null,
+    "AI Output": {
+      "answer": "Please specify the vehicle type involved in the violation for accurate penalty details.",
+      "needs_followup": true,
+      "quick_replies": [
+        "Two-wheeler",
+        "Four-wheeler / Car",
+        "Commercial / Heavy vehicle"
+      ],
+      "intent": "violation_check"
+    }
+  },
+  {
+    "TC_ID": "HG012",
+    "Language": "Hinglish",
+    "User Query": "Driver drunk tha, PUC expire ho chuka tha, aur silencer modified tha. Teeno ke liye alag-alag exact rules aur sections batao.",
+    "Expected MVA": "Sec 185, Sec 190(2)",
+    "Expected CMVR": "Rule 115, Rule 120",
+    "AI Output": {
+      "answer": "{\n  \"answer\": \"Violation: Driving under the influence of alcohol\\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 185\\nPenalty: Imprisonment up to 6 months or fine up to ₹10,000 or both for first offense; increased penalties for subsequent offenses\\nEnforcement Action: Detention of vehicle and suspension or disqualification of driving license\\nShort Explanation: Driving while intoxicated or under the influence of drugs is strictly prohibited and punishable to ensure road safety.\\n\\nViolation: Driving with an expired Pollution Under Control (PUC) Certificate\\nRelevant Law / Section: Central Motor Vehicles Rules, Rule 115\\nPenalty: Fine of up to ₹2,000; failure to produce PUC within 7 days after detection can lead to license cancellation\\nEnforcement Action: Vehicle may be stopped; requirement to produce valid PUC within stipulated time\\nShort Explanation: Vehicles must have a valid pollution control certificate to limit air pollution for environmental safety.\\n\\nViolation: Using a modified vehicle silencer causing excess noise\\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 112 and Central Motor Vehicles Rules regarding noise pollution\\nPenalty: For first offense fine up to ₹1,000; subsequent offenses fine up to ₹2,000; serious violations can attract imprisonment up to 3 months or fine up to ₹10,000 or both\\nEnforcement Action: Vehicle may be impounded and driver disqualified for holding license",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "general_info"
+    }
+  },
+  {
+    "TC_ID": "HG014",
+    "Language": "Hinglish",
+    "User Query": "Truck driver ne seat belt nahi pehni thi aur gaadi me limit se zyada goods load the. Exact provision batao.",
+    "Expected MVA": "Sec 194B, Sec 194",
+    "Expected CMVR": "Rule 138",
+    "AI Output": {
+      "answer": "Violation: Driving a motor vehicle without wearing a safety belt; Driving vehicle loaded beyond permissible limits\nRelevant Law / Section: Section 194(B)(1) - Not wearing seat belt; Section 194(1)(A) - Overloading beyond permissible limits\nPenalty: Fine of ₹1000 for not wearing seat belt; Fine of ₹20,000 for overloading\nEnforcement Action: Imposition of fines; Possible suspension or cancellation of driving licence for repeat or serious offences\nShort Explanation: A truck driver must wear a safety belt while driving to ensure safety and avoid penalty. Loading goods beyond the permissible limits is an offence attracting a heavy fine and can lead to further licence suspension actions.",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    }
+  }
+]

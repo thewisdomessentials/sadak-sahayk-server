@@ -9,8 +9,26 @@ __pycache__/
 
 .DS_Store
 
+.env
+.env.*
+!.env.example
+
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+.DS_Store
+
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
 *.log
+
+# Data and Local Artifacts
+data/
+!data/data.md
+data.zip
+*.zip
+scratch/

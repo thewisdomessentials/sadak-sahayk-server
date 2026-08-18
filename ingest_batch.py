@@ -1,4 +1,5 @@
 import os
+import re
 import uuid
 import fitz  # PyMuPDF
 from openai import OpenAI, RateLimitError
@@ -54,6 +55,24 @@ def chunk_legal_document(text, max_chars=800, overlap=100):
         chunks.append(current.strip())
     return chunks
 
+def semantic_chunk_legal_document(text):
+    # Split the text whenever a new line starts with a number, optional letter, and a period (e.g., "194B. ")
+    chunks = re.split(r'\n(?=\d+[A-Z]*\.\s)', text)
+    
+    valid_chunks = []
+    for c in chunks:
+        c = c.strip()
+        if not c: continue
+        
+        # If a single section is extraordinarily long, we will safely sub-chunk it
+        if len(c) > 3000:
+            sub_chunks = [c[i:i+2000] for i in range(0, len(c), 1800)]
+            valid_chunks.extend(sub_chunks)
+        else:
+            valid_chunks.append(c)
+            
+    return valid_chunks
+
 def get_existing_sources(q_client, collection_name):
     print("🔍 Querying Qdrant for existing indexed documents...")
     existing_sources = set()
@@ -102,10 +121,9 @@ def main():
                 # Normalize path for Qdrant storage (use forward slashes)
                 qdrant_source_name = file_path.replace("\\", "/")
                 
-                if qdrant_source_name in existing_sources:
-                    print(f"⏭️  SKIPPING (Already Indexed): {qdrant_source_name}")
-                else:
-                    files_to_process.append((file_path, qdrant_source_name))
+                if qdrant_source_name in ["data/MVA 1988 till 2025 may.pdf", "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf", "data/Sadak_Sahayak_Original_Knowledge_Base.pdf", "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf", "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf"]:
+                    if qdrant_source_name not in existing_sources:
+                        files_to_process.append((file_path, qdrant_source_name))
 
     if not files_to_process:
         print("\n🎉 All PDFs are already indexed! Nothing new to process.")
@@ -120,7 +138,7 @@ def main():
         if not text:
             continue
             
-        chunks = chunk_legal_document(text)
+        chunks = semantic_chunk_legal_document(text)
         print(f"    -> Created {len(chunks)} chunks.")
         if not chunks:
             continue
