@@ -30,3 +30,13 @@ scratch/
 # Azure CLI
 AzureCLI.msi
 .azure/
+
+# Recent Test Scripts & Outputs
+test_batch_v6.py
+batch_query_v6_results.json
+test_single.py
+test_10_unique.py
+test_10_unique_results.json
+ingest_batch.py
+check_hindi_pdf.py
+test_fastapi.py
