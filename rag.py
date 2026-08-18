@@ -19,7 +19,7 @@ VISION_MODEL = os.getenv("OPENAI_VISION_MODEL", "gpt-4o-mini")
 
 MAX_INPUT_TOKENS = 500
 MAX_CONTEXT_TOKENS = 1500
-MAX_OUTPUT_TOKENS = 300
+MAX_OUTPUT_TOKENS = 600
 
 logger = logging.getLogger(__name__)
 
@@ -50,12 +50,11 @@ def build_developer_prompt(
 RESPONSE JSON CONTRACT
 Return only valid JSON with this shape:
 {
+  "reasoning": "STRICT MAXIMUM 1 SENTENCE. Briefly state why you chose the authority.",
   "answer": "string",
   "needs_followup": true,
   "quick_replies": ["string"],
-  "intent": "string",
-  "enforcement_agency": "string",
-  "resolution_authority": "string"
+  "intent": "string"
 }
 
 Rules for JSON:
@@ -81,6 +80,10 @@ DO NOT set needs_followup: true for:
 - Image-based queries (answer from visible evidence only).
 """ if expect_json else ""
 
+    json_formatting_rule = "Ensure you return a single valid JSON object. Inside the 'answer' string itself, you MUST append these two lines at the very bottom strictly formatted:\n\nEnforcement Agency: [Category] - [Specific]\nResolution Authority: [Category] - [Specific]"
+    text_formatting_rule = "At the very end of your response text, you MUST append these two lines strictly formatted:\n\nEnforcement Agency: [Category] - [Specific]\nResolution Authority: [Category] - [Specific]"
+    formatting_rule_text = json_formatting_rule if expect_json else text_formatting_rule
+
     return f"""{json_block}
 
 You MUST respond using the language specified by the UI language setting.
@@ -89,16 +92,26 @@ UI Language:
 {ui_language}
 
 AUTHORITY MAPPING PRINCIPLES:
-Use these rules to deduce the Enforcement Agency and Resolution Authority:
-1. Compoundable vs Non-Compoundable: If the penalty includes mandatory imprisonment (e.g., Section 185 Drunk Driving, Section 184 Dangerous Driving), it MUST go to Court. (Enforcement: Traffic Police | Resolution: Court)
-2. Moving vs Administrative: On-road behavioral violations (speeding, red light, no helmet) are enforced by Traffic Police via Spot Fine/Portal. Administrative violations (Permits, Fitness, Taxes) belong to the RTO.
-3. Shared Jurisdiction: Basic documents (License, PUC, Insurance) can be checked by both Police and RTO (Enforcement: Traffic Police / RTO | Resolution: Portal / Spot Fine).
+Deduce the Enforcement Agency and Resolution Authority.
+Format them exactly as "[Category] - [Specific Authority]".
+
+Categories MUST be exactly one of:
+- Enforcement Category: 'Police', 'RTO', 'Other'
+- Resolution Category: 'Spot Fine / Portal', 'Court', 'RTO', 'Other'
+
+Specific Authority Normalization (Indian Context):
+Do not use foreign or overly technical judicial ranks. Normalize the specific authority text:
+- 'Highway Patrol' -> map to 'Traffic Police'
+- 'Judicial Magistrate' or 'Magistrate First Class' -> map to 'District Court' or 'Traffic Court'
+
+Rules for mapping:
+1. Imprisonment: If the penalty explicitly mandates imprisonment (e.g., Drunk Driving), Resolution is 'Court - District Court'.
+2. Administrative: Vehicle documents (Fitness, Permits, Registration) go to Enforcement 'RTO - Regional Transport Office'.
+3. Moving / Behavioral: On-road violations (Speeding, Red Light) that only involve fines go to Enforcement 'Police - Traffic Police' and Resolution 'Spot Fine / Portal - Spot Fine'.
+4. License Disqualification: (like No Helmet) Enforcement is 'Police - Traffic Police' and Resolution is 'RTO - Regional Transport Office' (since RTO suspends licenses).
 
 FORMATTING RULE:
-At the very end of your response text (whether inside a JSON 'answer' field or streaming plain text), you MUST append these two lines strictly formatted:
-
-Enforcement Agency: [Agency Name]
-Resolution Authority: [Authority Name]
+{formatting_rule_text}
 
 ABSOLUTE RULES:
 - If the UI Language is "hi", respond ONLY in Hindi.
@@ -135,15 +148,15 @@ If LANGUAGE=en, use exactly these headers:
 Violation:
 Relevant Law / Section:
 Penalty: (If the penalty amount is not clearly verified from the source text , mention it from which source and state exactly: "Penalty requires verification from the current applicable notification/schedule.")
-Enforcement Action:
-Short Explanation:
+Enforcement Action: (Describe the exact on-ground protocol, evidence preservation, and documentation steps. Do NOT just write the agency name here.)
+Short Explanation: (MAXIMUM 15 words)
 
 If LANGUAGE=hi, use exactly these headers:
 उल्लंघन:
 प्रासंगिक कानून / धारा:
 दण्ड: (If the penalty amount is not clearly verified from the source text, state exactly: "जुर्माने की पुष्टि वर्तमान लागू अधिसूचना/अनुसूची से की जानी चाहिए।")
-प्रवर्तन कार्यवाही:
-संक्षिप्त विवरण:
+प्रवर्तन कार्यवाही: (Describe the exact on-ground protocol, evidence preservation, and documentation steps in Hindi. Do NOT just write the agency name here.)
+संक्षिप्त विवरण: (MAXIMUM 15 words)
 
 When needs_followup is true, the answer field must ONLY contain the clarifying question.
 Do NOT include the structured headers in a follow-up response.
@@ -350,31 +363,24 @@ def generate_response(
         logger.warning("Regex output filter caught IPC hallucination. Overriding response.")
         if expect_json:
             return {
-                "answer": fallback_msg,
+                "reasoning": "Fallback Triggered",
+                "answer": fallback_msg + "\n\nEnforcement Agency: Other - N/A\nResolution Authority: Other - N/A",
                 "needs_followup": False,
                 "quick_replies": [],
-                "intent": "safety_override",
-                "enforcement_agency": "N/A",
-                "resolution_authority": "N/A"
+                "intent": "safety_override"
             }
         return fallback_msg
 
     if expect_json:
         parsed = _safe_json_loads(output_text)
         if parsed is not None:
-            # Ensure the new fields exist even if the LLM hallucinated them away
-            if "enforcement_agency" not in parsed:
-                parsed["enforcement_agency"] = "Traffic Police / RTO"
-            if "resolution_authority" not in parsed:
-                parsed["resolution_authority"] = "Court / Spot Fine"
             return parsed
         return {
-            "answer": output_text,
+            "reasoning": "Parse Failed",
+            "answer": output_text + "\n\nEnforcement Agency: Other - Unknown\nResolution Authority: Other - Unknown",
             "needs_followup": False,
             "quick_replies": [],
-            "intent": "general_info",
-            "enforcement_agency": "Unknown",
-            "resolution_authority": "Unknown"
+            "intent": "general_info"
         }
     return output_text
 
