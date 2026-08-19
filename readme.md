@@ -122,7 +122,7 @@ docker push ca6e8c56008bacr.azurecr.io/sadaksahayak-chat:v1
 - The app relies on OpenAI for chat, vision, and transcription.
 - FCM registration is handled server-side through `POST /devices/register`.
 
-## Automated Batch Testing
+## Batch Testing
 
 You can easily test the RAG pipeline against bulk data locally using the included python scripts. These are particularly useful for validating enforcement agency and resolution authority mapping.
 
