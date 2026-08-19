@@ -1,57 +1,13 @@
 [
   {
-    "Test_Case_ID": "TC-011",
-    "Original_Query": "मैंने कार CG04AB6721 को रोका। वाहन का पंजीकरण वैध है, लेकिन बीमा डेटाबेस से पता चलता है कि अनिवार्य बीमा पॉलिसी 4 महीने पहले समाप्त हो चुकी है। चालक का कहना है कि वह इसे कल नवीनीकृत करवाएगा। कौन सा कानूनी प्रावधान लागू होता है, और क्या आज चालान जारी किया जा सकता है? छत्तीसगढ़ के नवीनतम अनुसूची और कराधान नियम के अनुसार।",
+    "Test_Case_ID": "TC-041",
+    "Original_Query": "मैंने मोटरसाइकिल CG07AB6248 को रोका। सवार स्पष्ट रूप से चिह्नित 50 किमी/घंटा की गति सीमा वाले क्षेत्र में 82 किमी/घंटा की गति से चल रहा था, लेकिन उसने न तो टेढ़ी-मेढ़ी चलाई, न रेसिंग की, न ही टक्कर होते-होते बची और न ही कोई अन्य खतरनाक व्यवहार किया। क्या इसे अत्यधिक गति या खतरनाक ड्राइविंग माना जाना चाहिए?",
     "AI_Output": {
-      "answer": "If a vehicle has valid registration but its mandatory third-party insurance policy expired four months ago, the key violation is driving without valid insurance under Sections 146 and 196 of the Motor Vehicles Act, 1988. Valid insurance is a separate prerequisite from registration, so the expiry of insurance alone forms an offence. The driver’s claim to renew insurance tomorrow does not exempt them from penalty today if currently uninsured. The Chhattisgarh schedule and taxation rules under Sections 146 and 196 apply for penalizing use without valid third-party insurance. Yes, a challan can be issued today for this offence.",
+      "reasoning": "Section 183 of the Motor Vehicles Act 1988 addresses driving at excessive speed, with dangerous driving requiring additional behaviors, which are absent here.",
+      "answer": "Violation: Over-speeding\nRelevant Law / Section: Motor Vehicles Act, 1988 - Section 183\nPenalty: Fine as per motor vehicles rules (exact fine requires verification from notification/schedule)\nEnforcement Action: Police may issue a challan for exceeding speed limit; evidence includes speed measurement and vehicle details; no imprisonment as no dangerous conduct seen.\nShort Explanation: Driving at 82 km/h in a 50 km/h zone is over-speeding but not dangerous driving.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
       "needs_followup": false,
       "quick_replies": [],
-      "intent": "penalty_lookup"
-    },
-    "Sources_Used": [
-      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
-      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf",
-      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
-      "data/Morth Circularand Circular/08-08-2018.pdf"
-    ]
-  },
-  {
-    "Test_Case_ID": "TC-012",
-    "Original_Query": "एक मोटरसाइकिल (CG07MN4528) को 50 किमी/घंटा की गति सीमा वाले क्षेत्र में 78 किमी/घंटा की गति से चलते हुए दर्ज किया गया। साथ ही, चालक बार-बार वाहनों के बीच से निकल रहा था और अन्य सड़क उपयोगकर्ताओं को अचानक ब्रेक लगाने के लिए मजबूर कर रहा था। क्या इसे केवल अत्यधिक गति माना जाना चाहिए या किसी अन्य कानूनी प्रावधान पर भी विचार किया जाना चाहिए? छत्तीसगढ़ अनुसूची और कराधान के नवीनतम नियमों के अनुसार।",
-    "AI_Output": {
-      "answer": "The incident involves two violations for the motorcycle: 1. Speeding by traveling at 78 km/h in a 50 km/h zone. 2. Dangerous driving due to repeated weaving and forcing others to brake suddenly. Both speeding and dangerous driving should be considered separately under the Motor Vehicles Act.",
-      "needs_followup": false,
-      "quick_replies": [],
-      "intent": "violation_check"
-    },
-    "Sources_Used": [
-      "data/TWE_Traffic_Law_AI_Knowledge_Base_2026_CLEAN_CURRENT_LAW.pdf",
-      "data/Morth Circularand Circular/STALL_QB_ENGLISH_NEW.pdf"
-    ]
-  },
-  {
-    "Test_Case_ID": "TC-013",
-    "Original_Query": "मैंने यात्री बस CG01PA8822 को रोका। वाहन परिवहन वाहन के रूप में पंजीकृत है, लेकिन ऑपरेटर उस रूट के लिए वैध परमिट प्रस्तुत नहीं कर पा रहा है जिस पर यह वर्तमान में चल रही है। फिटनेस सर्टिफिकेट वैध है। मुझे चालान के लिए कौन सा कानूनी प्रावधान देखना चाहिए, और क्या वैध फिटनेस सर्टिफिकेट संचालन को कानूनी बनाता है? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
-    "AI_Output": {
-      "answer": "Violation: Operating a passenger bus without a valid route permit despite having a valid fitness certificate.\nRelevant Law / Section: As per The Chhattisgarh Motor Vehicles Rules, 1994, the vehicle must have a valid permit for the specified scheduled service route to legally ply. A fitness certificate certifies mechanical fitness but does not replace the need for a valid route permit. Section 56(4) of the Motor Vehicles Act, 1988, as cited, allows suspension or cancellation of the fitness certificate if the vehicle does not meet requirements, implying operational legality requires both fitness and valid permit.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: The vehicle can be ordered off-road or have its permit suspended until valid permits are obtained. The Regional Transport Officer can cancel or suspend the certificate of fitness linked to permit status.\nShort Explanation: The fitness certificate confirms the vehicle's mechanical fitness but does not authorize operation on routes without a valid permit. Therefore, a valid permit specific to the route is mandatory to operate legally. Operating without it breaches transport regulations and is subject to penalties and enforcement including cancellation of the fitness certificate.",
-      "needs_followup": false,
-      "quick_replies": [],
-      "intent": "violation_check"
-    },
-    "Sources_Used": [
-      "data/cmvtaxation_act_1991_text.pdf",
-      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
-      "data/Gazzette/18062020_draft GSR 392(E) dated 18th June 2020 generalized transport regime for movement of passenger and Goods vehicles.pdf"
-    ]
-  },
-  {
-    "Test_Case_ID": "TC-015",
-    "Original_Query": "मैंने रात 11:40 बजे एसयूवी CG05XY9182 को रोका। चालक की वाणी लड़खड़ा रही थी और उससे शराब की गंध आ रही थी। क्या केवल इन लक्षणों के आधार पर ही शराब पीकर गाड़ी चलाने का प्रावधान तुरंत लागू किया जा सकता है, या मुझे पहले ब्रेथ एनालाइजर/परीक्षण कराना चाहिए? मुझे नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार क्या रिकॉर्ड करना चाहिए?",
-    "AI_Output": {
-      "answer": "No, the offense of drunk driving cannot be immediately applied solely based on signs like slurred speech or smell of alcohol. According to Section 185 of the Motor Vehicles Act, 1988, a formal test such as a breath analyzer or other laboratory test must detect alcohol levels exceeding 30 mg per 100 ml of blood to establish the offense legally.",
-      "needs_followup": false,
-      "quick_replies": [],
-      "intent": "violation_check"
+      "intent": "violation_classification"
     },
     "Sources_Used": [
       "data/MVA 1988 till 2025 may.pdf",
@@ -60,64 +16,153 @@
     ]
   },
   {
-    "Test_Case_ID": "TC-016",
-    "Original_Query": "मैंने कार CG04CD7821 को रोका क्योंकि मैंने देखा कि चालक अपने दाहिने हाथ में मोबाइल फोन पकड़े हुए गाड़ी चलाते समय बात कर रहा था। चालक का कहना है कि वह केवल एक जरूरी कॉल का जवाब दे रहा था। कौन सा यातायात उल्लंघन लागू होता है और चालान जारी करने से पहले मुझे किस कानूनी प्रावधान की जांच करनी चाहिए? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
+    "Test_Case_ID": "TC-042",
+    "Original_Query": "एक यातायात अधिकारी ने कार संख्या CG04MN7812 के लिए इलेक्ट्रॉनिक चालान जारी किया, लेकिन गलती से पंजीकरण संख्या के रूप में CG04MN7182 दर्ज कर दिया। उल्लंघन, स्थान, समय और कैमरे के साक्ष्य सही हैं। अधिकारी को क्या करना चाहिए? क्या दूसरा चालान बनाया जाना चाहिए?",
     "AI_Output": {
-      "answer": "Violation: Using a mobile phone while driving with the phone held in hand.\nRelevant Law / Section: As per the Motor Vehicles Act and Central Motor Vehicles Rules applicable in Chhattisgarh, handheld mobile phone usage while driving is prohibited. The specific provision to check is Section 184 of the Motor Vehicles Act, 1988, which deals with dangerous driving, including using a handheld mobile device.\nPenalty: Penalty requires verification from the current applicable notification/schedule. Generally, the fine under central rules can be Rs. 1,000 for first offense and higher for repeated offences, but Chhattisgarh may have specific compounding amounts.\nEnforcement Action: Issue challan based on the above provision, verify identity and vehicle details and record evidence of phone use while driving.\nShort Explanation: Holding and using a mobile phone handset while driving is a dangerous driving offence that distracts the driver, increasing accident risk. Legal provisions under MVA Section 184 apply, with penalties as per the latest state-specific notification.",
+      "reasoning": "The source specifically addresses the procedure for correcting a wrong registration number in an electronic challan without causing duplication.",
+      "answer": "The officer should verify the original violation evidence and confirm the correct registration number from the official vehicle record. Then, they must use the authorized e-challan correction or cancellation workflow applicable to their enforcement system. Creating a duplicate challan just to fix the registration number error should be avoided. The original camera and evidence records should be preserved to maintain the audit trail.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
       "needs_followup": false,
       "quick_replies": [],
-      "intent": "violation_check"
+      "intent": "violation_correction"
     },
     "Sources_Used": [
       "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
-      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
-      "data/ChhattisgarhStateEVPolicy2022English.pdf"
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf"
     ]
   },
   {
-    "Test_Case_ID": "TC-017",
-    "Original_Query": "एक मोटरसाइकिल (CG07EF3198) ने व्यस्त चौराहे पर लाल सिग्नल पार किया। ट्रैफिक कैमरे ने सिग्नल लाल होने के बाद भी मोटरसाइकिल को स्टॉप लाइन पार करते हुए कैद किया। कोई दुर्घटना नहीं हुई। नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार, किस कानूनी उल्लंघन को माना जाना चाहिए और चालान के साथ क्या सबूत संलग्न किए जाने चाहिए?",
+    "Test_Case_ID": "TC-043",
+    "Original_Query": "मैंने कमर्शियल टैक्सी CG03TX4526 को रोका। वाहन का वैध परमिट है, लेकिन परमिट में अधिकृत संचालन संबंधी विशिष्ट शर्तें हैं। निरीक्षण के दौरान, वाहन एक शर्त का उल्लंघन करता हुआ प्रतीत हुआ। चालक का कहना है कि परमिट स्वयं वैध है। मुझे किस कानूनी प्रावधान की जांच करनी चाहिए?",
     "AI_Output": {
-      "answer": "Violation: Crossing a red signal (jumping traffic light) by motorcycle.\nRelevant Law / Section: Under the Motor Vehicles Act, 1988 and applicable Chhattisgarh Motor Vehicle Rules.\nPenalty: The penalty amount for this offence requires verification from the current applicable notification/schedule.\nEnforcement Action: Possible fine and challan as per state traffic regulations; no vehicle seizure as no accident occurred.\nShort Explanation: The motorcycle violated traffic rules by passing the stop line at a red signal, which is a traffic offence subject to penalty under the Motor Vehicles Act and related Chhattisgarh rules.",
+      "reasoning": "The sources specifically describe conditions and violations related to tourist permits and commercial vehicle operations.",
+      "answer": "Violation: Operating a commercial taxi or tourist vehicle outside the authorized conditions, including unauthorized operation beyond permitted States, carrying contraband luggage, or using the vehicle for unauthorized goods transport.\nRelevant Law / Section: Central Motor Vehicles Rules 1989 - Rules 83, 84, 85; Chhattisgarh Motor Vehicles Rules 1994 (additional permit conditions).\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Authorities inspect permits, verify trip records and passenger lists, check vehicle usage compliance; violations result in penalties or permit suspension.\nShort Explanation: Tourist and commercial taxis must follow permit conditions strictly.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
       "needs_followup": false,
       "quick_replies": [],
       "intent": "violation_check"
     },
     "Sources_Used": [
+      "data/Appendices_English .pdf",
       "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
-      "CG Motor Vehicle Taxation Act and Rule 1991 (2024 Print)_organized_ocr.pdf",
-      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
-      "data/cmvtaxation_act_1991_text.pdf"
+      "data/CMVR-chapter4_English.pdf"
     ]
   },
   {
-    "Test_Case_ID": "TC-019",
-    "Original_Query": "मालवाहक ट्रक CG10JK6724 का अनुमत सकल वाहन भार 25,000 किलोग्राम है, लेकिन वेइंगब्रिज पर इसका वजन 29,500 किलोग्राम दर्ज हुआ है। चालक का कहना है कि अतिरिक्त माल परिवहन कंपनी द्वारा लादा गया था और उसे इस वजन की जानकारी नहीं थी। कौन सा कानूनी प्रावधान लागू हो सकता है, और चालान/कार्रवाई तय करने से पहले अधिकारी को क्या सत्यापित करना चाहिए? यह जानकारी छत्तीसगढ़ अनुसूची और कराधान नियम के नवीनतम नियमों के अनुसार है।",
+    "Test_Case_ID": "TC-044",
+    "Original_Query": "एसयूवी CG05RK9184 एक दुर्घटना में शामिल थी। सीसीटीवी फुटेज से पता चलता है कि एसयूवी चालक गलत लेन में चला गया और दुर्घटना का कारण बना। पंजीकृत मालिक मौके पर मौजूद नहीं था और उसने बताया कि वाहन एक रिश्तेदार को उधार दिया गया था। पुलिस अधिकारी को चालक के रूप में किसे पहचानना चाहिए, और क्या मालिक को स्वतः ही उसी ड्राइविंग अपराध का चालान मिल सकता है?",
     "AI_Output": {
-      "answer": "Violation: Overloading a goods vehicle beyond its permitted Gross Vehicle Weight (GVW).\nRelevant Law / Section: The specific rules under The Chhattisgarh Motor Vehicles Rules, 1994 regarding goods carriage overloading and Section related to gross vehicle weight limits.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Authorities can demand the driver to place the vehicle on a weighbridge or wheel-weigher approved by the Transport Commissioner to verify the actual weight. If overloaded, challan can be issued to the driver and/or transport company as per the law. Both the driver and the transport company can be held responsible for carrying excess load beyond permitted limits.\nShort Explanation: Overloading a goods vehicle beyond the permitted GVW of 25,000 kg, such as with 29,500 kg, constitutes a violation. Authorities use weighbridges to verify the excess weight. Responsibility lies both on the driver for driving the overloaded vehicle and on the transport company for authorizing the extra load. Penalties depend on the specific rules applicable, which require verification.",
+      "reasoning": "The detailed source texts and legal principles establish that the registered owner is not automatically held responsible if the vehicle was lent and misuse occurred.",
+      "answer": "Violation: Driving in the wrong lane causing an accident.\nRelevant Law / Section: Section 134 (Careless Driving) of the Motor Vehicles Act, 1988.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Police will collect CCTV evidence, record statements, and identify the actual driver from witness or owner information before issuing a challan.\nShort Explanation: Actual driver liable if identified; owner informs police if vehicle lent.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
       "needs_followup": false,
       "quick_replies": [],
-      "intent": "overloading_violation_in_gv_weight"
+      "intent": "violation_liability_check"
     },
     "Sources_Used": [
       "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
-      "data/Gazzette/380_07082023.pdf",
-      "data/Gazzette/197_04052023.pdf"
-    ]
-  },
-  {
-    "Test_Case_ID": "TC-020",
-    "Original_Query": "मैंने मोटरसाइकिल CG08LM5216 को रोका। चालक के पास वैध लर्नर लाइसेंस है, लेकिन वह आवश्यक लर्नर पहचान/चिह्न के बिना और लागू लर्नर शर्तों का पालन किए बिना अकेले मोटरसाइकिल चला रहा है। उसका कहना है कि चूंकि उसका लर्नर लाइसेंस वैध है, इसलिए कोई चालान जारी नहीं किया जा सकता। अधिकारी को क्या जांच करनी चाहिए? नवीनतम छत्तीसगढ़ अनुसूची और कराधान नियम के अनुसार।",
-    "AI_Output": {
-      "answer": "Violation: Riding a motorcycle with a learner's license without displaying the required 'L' mark and not following learner conditions. Relevant Law / Section: As per CMVR, the vehicle must have the letter 'L' painted at front and rear as specified for learner drivers. Penalty: Penalty requires verification from the current applicable notification/schedule. Enforcement Action: Vehicle may be stopped and the rider warned or fined as per law. Short Explanation: A learner driver must display the learner 'L' mark on the vehicle clearly and comply with all learner conditions; failing to do so is a violation despite having a valid learner's license.",
-      "needs_followup": false,
-      "quick_replies": [],
-      "intent": "violation_check"
-    },
-    "Sources_Used": [
       "data/CMVR_1989.pdf",
-      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1) (1).pdf",
-      "data/Morth Circularand Circular/MVL-Cir-Amendment File-Finalised-Draft (1).pdf"
+      "data/CMVR-chapter8_English.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-045",
+    "Original_Query": "ट्रक CG10PL6723 के निरीक्षण के दौरान, चालक ने एक फिटनेस प्रमाण पत्र प्रस्तुत किया जिसकी वैधता तिथि में मैनुअल रूप से परिवर्तन किया गया प्रतीत होता है। आधिकारिक डेटाबेस में वैधता तिथि भिन्न दर्ज है। चालक का दावा है कि डेटाबेस को अपडेट नहीं किया गया है। अधिकारी को क्या सत्यापित करना चाहिए, और क्या इसे केवल वैधता समाप्त हो चुके दस्तावेज़ के चालान के रूप में ही माना जाना चाहिए?",
+    "AI_Output": {
+      "reasoning": "The source explicitly mandates verification parameters for fitness certificate discrepancies involving manual alterations and database mismatches.",
+      "answer": "Violation: Presentation of a fitness certificate with a potentially altered validity date conflicting with the official database record.\nRelevant Law / Section: Section 56 of the Motor Vehicles Act, 1988.\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: The officer should verify the certificate number, issuing authority or authorized testing station, vehicle identity, issuance date, expiry date, and also check for indicators of authenticity versus manual alteration while considering the official database record; treat any discrepancy as evidence requiring further investigation, and record if the physical certificate appears altered but do not label it forgery without proper verification.\nShort Explanation: Verify all certificate details and authenticity against official records carefully.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-046",
+    "Original_Query": "मैंने हाल ही में खरीदी गई कार CG04TR4521 को रोका। वाहन का अस्थायी पंजीकरण है, लेकिन उसकी वैधता अवधि समाप्त हो चुकी है। मालिक का कहना है कि स्थायी पंजीकरण के लिए आवेदन जमा कर दिया गया है और उन्होंने आवेदन की रसीद भी दिखाई। मुझे कौन-सी कानूनी प्रक्रिया की जाँच करनी चाहिए?",
+    "AI_Output": {
+      "reasoning": "Section 39 states the need for registration, Section 43 governs temporary registration, and Rule 47 and Section 192 specify application timing and penalties for using an unregistered vehicle.",
+      "answer": "Violation: Driving a vehicle with expired temporary registration without valid renewal or extension.\nRelevant Law / Section: Motor Vehicles Act Sections 39, 43, 192; Central Motor Vehicles Rules Rule 47.\nPenalty: Using a vehicle without valid registration is punishable under Section 192 with penalties as prescribed by the Motor Vehicles Act; exact penalties require verification from the current applicable notification/schedule.\nEnforcement Action: Verify expiry date of temporary registration, check for valid extension or permanent registration issuance; preserve application receipt as evidence but do not treat it as valid authorization if registration is expired; initiate action under Section 192 if no valid registration exists.\nShort Explanation: Driving with expired temporary registration without valid extension is illegal.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "legal_procedure_registration_expiry"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Gazzette/29052020_draft GSR 336(E) dated 29th May 2020 Licensing of drivers, Fitness and Registration of motor vehicles_0.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-047",
+    "Original_Query": "मैंने मोटरसाइकिल CG07KL6193 को रोका। सवार ने हेलमेट नहीं पहना था, उसके साथ दो और यात्री सवार थे, और वह मोटरसाइकिल चलाते समय मोबाइल फोन का इस्तेमाल कर रहा था। ये सभी उल्लंघन एक ही बार में देखे गए। क्या अधिकारी को एक ही चालान जारी करना चाहिए या प्रत्येक उल्लंघन को अलग-अलग दर्ज करना चाहिए?",
+    "AI_Output": {
+      "reasoning": "The source specifies that helmet, multiple pillion riders, and handheld mobile phone use are separate violations requiring distinct challans.",
+      "answer": "Violation: 1) Protective headgear non-compliance (Helmet) 2) Motorcycle driver/pillion safety (More than one pillion) 3) Use of handheld communications device while driving.\nRelevant Law / Section: 1) Section 129 (enforced via 194D) 2) Section 128 (enforced via 194C) 3) Section 184.\nPenalty: Penalty requires verification from the current applicable notification/schedule for each violation.\nEnforcement Action: Record each violation separately with photographic/video evidence, verify rider and vehicle details, and issue enforcement documents for all three violations in the same stop.\nShort Explanation: Separate challans recommended for helmet, triple riding, and phone use.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/Sadak_Sahayak_Original_Knowledge_Base.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-048",
+    "Original_Query": "एक ट्रैफिक कैमरे में कार CG05AB8274 को लाल सिग्नल पार करते हुए रिकॉर्ड किया गया है। तस्वीर में रजिस्ट्रेशन नंबर स्पष्ट रूप से दिखाई दे रहा है, लेकिन ड्राइवर का चेहरा नहीं पहचाना जा सकता। पंजीकृत मालिक का कहना है कि परिवार के कई सदस्य इस कार का इस्तेमाल करते हैं। इलेक्ट्रॉनिक चालान जारी करने से पहले अधिकारी को क्या सत्यापित करना चाहिए?",
+    "AI_Output": {
+      "reasoning": "Section 136A mandates electronic enforcement verification and Section 133 requires the owner to provide driver information when the driver is unknown.",
+      "answer": "Violation: Crossing red signal\nRelevant Law / Section: Motor Vehicles Act, Section 134 (Red light signal violation)\nPenalty: Fine as prescribed under Section 134; Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Preserve camera evidence, verify vehicle registration, issue electronic challan, and require owner under Section 133 to provide driver details.\nShort Explanation: Red light violation with owner duty to reveal driver identity.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/AIS (400 pdf)/AIS_129 ARAI Rules.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-049",
+    "Original_Query": "मैंने ट्रक CG10PQ4527 को रोका क्योंकि यह अत्यधिक भार से लदा हुआ प्रतीत हो रहा था। चालक का कहना है कि माल अनुमत भार सीमा के भीतर है। मेरे पास वेइंगब्रिज रीडिंग या अन्य कोई विश्वसनीय माप उपलब्ध नहीं है। क्या मैं केवल दृश्य निरीक्षण के आधार पर ओवरलोडिंग का चालान जारी कर सकता हूँ?",
+    "AI_Output": {
+      "reasoning": "Section 114 mandates weighment evidence for overloading penalty; visual inspection alone is insufficient legally.",
+      "answer": "Violation: Overloading of a goods vehicle\nRelevant Law / Section: Motor Vehicles Act, 1988 Sections 113, 114, and 194\nPenalty: Penalty requires verification from the current applicable notification/schedule.\nEnforcement Action: Visual suspicion alone cannot justify a challan; authorized weighbridge measurement must be obtained and recorded in writing before enforcement action.\nShort Explanation: Visual evidence insufficient; official weighment required for valid challan.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Sadak_Sahayak_Procedure_Edge_Cases.pdf",
+      "data/Traffic_Law_RAG_Failure_KnowledgeBase_Current_Law_2026.pdf",
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/The_Chhattisgarh_Motor_Vehicles_Rules_1994_ok.PDF",
+      "data/CMVR_1989.pdf"
+    ]
+  },
+  {
+    "Test_Case_ID": "TC-050",
+    "Original_Query": "मैंने यातायात नियम तोड़ने के लिए ऑटो-रिक्शा CG06RT7815 को रोका। आधिकारिक सिस्टम में उसी उल्लंघन, उसी स्थान और उसी तारीख/समय के लिए चालान दर्ज है और भुगतान की स्थिति भी पहले से ही भुगतान की हुई है। चालक ने भुगतान की रसीद दिखाई। क्या मुझे एक और चालान जारी करना चाहिए?",
+    "AI_Output": {
+      "reasoning": "The official system's record shows a paid challan for the same offence, so issuing a duplicate is not proper.",
+      "answer": "Do not issue another traffic violation challan for the same offence, location, date, and time if the official system shows it has already been paid. Verify the transaction/receipt and follow the authorised e-challan correction or cancellation procedures if needed.\n\nEnforcement Agency: Police - Traffic Police\nResolution Authority: Spot Fine / Portal - Spot Fine",
+      "needs_followup": false,
+      "quick_replies": [],
+      "intent": "violation_check"
+    },
+    "Sources_Used": [
+      "data/Traffic_Law_RAG_Knowledge_Base for Hindi Failures.pdf",
+      "data/Sadak_Sahayak_Testcases_Correct_Knowledge.pdf",
+      "data/Gazzette/01032019_Notification_no__G_S_R_174(E)_dated_01_03_2019.pdf",
+      "data/Morth Circularand Circular/17th Dec 2018.pdf"
     ]
   }
 ]

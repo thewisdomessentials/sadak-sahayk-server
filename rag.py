@@ -80,8 +80,15 @@ DO NOT set needs_followup: true for:
 - Image-based queries (answer from visible evidence only).
 """ if expect_json else ""
 
-    json_formatting_rule = "Ensure you return a single valid JSON object. Inside the 'answer' string itself, you MUST append these two lines at the very bottom strictly formatted:\n\nEnforcement Agency: [Category] - [Specific]\nResolution Authority: [Category] - [Specific]"
-    text_formatting_rule = "At the very end of your response text, you MUST append these two lines strictly formatted:\n\nEnforcement Agency: [Category] - [Specific]\nResolution Authority: [Category] - [Specific]"
+    if ui_language == "hi":
+        agency_prefix = "प्रवर्तन एजेंसी:"
+        auth_prefix = "समाधान प्राधिकरण:"
+    else:
+        agency_prefix = "Enforcement Agency:"
+        auth_prefix = "Resolution Authority:"
+
+    json_formatting_rule = f"Ensure you return a single valid JSON object. Inside the 'answer' string itself, you MUST append these two lines at the very bottom strictly formatted:\n\n{agency_prefix} [Category] - [Specific]\n{auth_prefix} [Category] - [Specific]"
+    text_formatting_rule = f"At the very end of your response text, you MUST append these two lines strictly formatted:\n\n{agency_prefix} [Category] - [Specific]\n{auth_prefix} [Category] - [Specific]"
     formatting_rule_text = json_formatting_rule if expect_json else text_formatting_rule
 
     return f"""{json_block}
@@ -94,21 +101,24 @@ UI Language:
 AUTHORITY MAPPING PRINCIPLES:
 Deduce the Enforcement Agency and Resolution Authority.
 Format them exactly as "[Category] - [Specific Authority]".
+(Note: If UI Language is 'hi', translate the Category and Specific Authority names to Hindi).
 
 Categories MUST be exactly one of:
-- Enforcement Category: 'Police', 'RTO', 'Other'
-- Resolution Category: 'Spot Fine / Portal', 'Court', 'RTO', 'Other'
+- Enforcement Category: 'Police' (पुलिस), 'RTO' (आरटीओ), 'Transport Dept' (परिवहन विभाग), 'Other' (अन्य)
+- Resolution Category: 'Spot Fine / Portal' (स्पॉट फाइन / पोर्टल), 'Court' (न्यायालय), 'RTO' (आरटीओ), 'Other' (अन्य)
 
 Specific Authority Normalization (Indian Context):
 Do not use foreign or overly technical judicial ranks. Normalize the specific authority text:
 - 'Highway Patrol' -> map to 'Traffic Police'
 - 'Judicial Magistrate' or 'Magistrate First Class' -> map to 'District Court' or 'Traffic Court'
 
-Rules for mapping:
-1. Imprisonment: If the penalty explicitly mandates imprisonment (e.g., Drunk Driving), Resolution is 'Court - District Court'.
-2. Administrative: Vehicle documents (Fitness, Permits, Registration) go to Enforcement 'RTO - Regional Transport Office'.
-3. Moving / Behavioral: On-road violations (Speeding, Red Light) that only involve fines go to Enforcement 'Police - Traffic Police' and Resolution 'Spot Fine / Portal - Spot Fine'.
-4. License Disqualification: (like No Helmet) Enforcement is 'Police - Traffic Police' and Resolution is 'RTO - Regional Transport Office' (since RTO suspends licenses).
+Rules for mapping (STRICTLY APPLY THESE EVEN IF THE QUERY SAYS "I STOPPED THE VEHICLE"):
+1. Imprisonment / Forgery: If the penalty mandates imprisonment or involves forged/altered documents (like altered Fitness certificates), Resolution MUST be 'Court - District Court'.
+2. Document & Administrative: For violations regarding Vehicle Permits, Fitness Certificates, or Vehicle Registration, Enforcement MUST include 'RTO' (or 'RTO / Registering Authority') and Resolution MUST be 'RTO - Registering Authority' or 'RTO - RTA'.
+3. Overloading (Goods vehicles only): Enforcement MUST be 'Transport Dept - RTO Flying Squad' and Resolution MUST be 'Court - District Court'. Do NOT apply this to motorcycles.
+4. Passenger Overloading (Triple Riding) & License Disqualification (No Helmet, Mobile driving): Enforcement is 'Police - Traffic Police' and Resolution is 'RTO - Regional Transport Office' (since RTO suspends licenses).
+5. Accidents / Crashes: Enforcement is 'Police - Traffic / Civil Police' and Resolution is 'Court - District Court'.
+6. Moving / Behavioral: On-road violations (Speeding, Red Light, Wrong Lane) that only involve fines go to Enforcement 'Police - Traffic Police' and Resolution 'Spot Fine / Portal - Spot Fine'.
 
 FORMATTING RULE:
 {formatting_rule_text}
