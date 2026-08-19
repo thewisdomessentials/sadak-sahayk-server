@@ -121,3 +121,21 @@ docker push ca6e8c56008bacr.azurecr.io/sadaksahayak-chat:v1
 - The backend stores chat history, case history, and uploaded images in Azure SQL / Blob Storage.
 - The app relies on OpenAI for chat, vision, and transcription.
 - FCM registration is handled server-side through `POST /devices/register`.
+
+## Automated Batch Testing
+
+You can easily test the RAG pipeline against bulk data locally using the included python scripts. These are particularly useful for validating enforcement agency and resolution authority mapping.
+
+1. **Text Queries (`test_batch_queries.py`)**: 
+   - Modify the `batch_queries` list inside the file.
+   - Run `python test_batch_queries.py` to generate RAG responses in `batch_query_results.json`.
+
+2. **Images / Vision (`test_batch_images.py`)**:
+   - Run the script once to generate a `test_images/` folder.
+   - Drop your `.png`, `.jpg`, or `.jpeg` files inside `test_images/`.
+   - Run `python test_batch_images.py` to process the images via the multimodal pipeline. Results are saved to `batch_image_results.json`.
+
+3. **Audio / Voice Transcriptions (`test_batch_audio.py`)**:
+   - Run the script once to generate a `test_audio/` folder.
+   - Drop your `.mp3`, `.wav`, or `.m4a` files inside `test_audio/`.
+   - Run `python test_batch_audio.py` to transcribe the speech with Whisper and process the text via the RAG pipeline. Results are saved to `batch_audio_results.json`.

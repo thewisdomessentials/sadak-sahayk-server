@@ -36,3 +36,7 @@ check_hindi_pdf.py
 test_fastapi.py
 testcases/test_enforcement_mapping.py
 testcases/enforcement_mapping_results.json
+
+# Batch Test Artifacts
+*.json
+testcases/
